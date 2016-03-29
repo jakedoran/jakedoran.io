@@ -1,0 +1,70 @@
+// Import
+
+//font
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic);
+
+//mixin
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+
+
+html {
+	border: 12px solid #fff;
+	margin: 0;
+	
+}
+
+
+.home {
+	height: 97.5%;
+	width: 98.5%;
+	margin: 0;
+	position: absolute;
+	background: url(../img/bg-mountains.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+		.intro {
+		float: right;
+		@include vertical-align();
+
+	  h1 {
+			color: #fff;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 3em;
+			padding: 0px;
+			margin: auto 25%;
+			vertical-align: center;
+			text-align: right;
+			letter-spacing: -2px;
+		}
+		p {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 300;
+			font-style: italic;
+			font-size: 1.3em;
+			color: #fff;
+			margin: auto 25%;
+			padding-top: 5%;
+			text-align: right;
+		}
+
+	}
+
+}
+
+
+
+

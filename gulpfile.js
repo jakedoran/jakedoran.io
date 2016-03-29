@@ -1,0 +1,40 @@
+var gulp = require('gulp');
+
+// requires gulp-sass plugin
+var sass = require('gulp-sass');
+
+// browser synv
+var browserSync = require('browser-sync').create();
+
+gulp.task('browserSync', function() {
+  browserSync.init({
+    server: {
+      baseDir: 'app'
+    },
+  })
+});
+
+// compile sass to css
+gulp.task('sass', function() {
+  return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
+    .pipe(sass())
+    .pipe(gulp.dest('app/css'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
+});
+
+// gulp watch
+gulp.task('watch', ['browserSync', 'sass'], function (){
+  gulp.watch('app/scss/**/*.scss', ['sass']); 
+  // reloads browser whenever HTML or JS files change
+  gulp.watch('app/*.html', browserSync.reload); 
+  gulp.watch('app/js/**/*.js', browserSync.reload);
+});
+
+
+
+// test task
+gulp.task('hello', function() {
+  console.log('Hello Jake');
+});
