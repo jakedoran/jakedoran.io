@@ -14,6 +14,16 @@ gulp.task('browserSync', function() {
   })
 });
 
+// surge deploy
+var surge = require('gulp-surge')
+
+gulp.task('deploy', [], function () {
+  return surge({
+    project: './app',         // Path to your static build directory
+    domain: 'jakedoran.io'  // Your domain or Surge subdomain
+  })
+})
+
 // compile sass to css
 gulp.task('sass', function() {
   return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
