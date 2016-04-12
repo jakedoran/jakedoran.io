@@ -9,7 +9,6 @@ html {
 section {
   height: 100vh;
   width: 100%;
-  background-color: #333;
   border: 12px solid white; }
 
 .home {
@@ -20,7 +19,7 @@ section {
   background-size: cover; }
   .home .title {
     position: relative;
-    top: 50%;
+    top: 45%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
@@ -41,34 +40,86 @@ section {
       font-size: 1.3em;
       color: #fff;
       margin: auto 15%;
-      padding-top: 5%;
+      padding-top: 1%;
       text-align: right; }
 
-.intro .title {
-  position: relative;
-  top: 20%;
-  -webkit-transform: translateY(-20%);
-  -ms-transform: translateY(-20%);
-  transform: translateY(-20%); }
-  .intro .title h1 {
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 3em;
-    padding: 0px;
-    margin: auto 15%;
-    vertical-align: center;
-    letter-spacing: -2px; }
-  .intro .title h3 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-style: italic;
-    font-size: 1em;
-    color: #fff;
-    margin: auto 15%; }
-  .intro .title p {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: 1em;
-    color: #fff;
-    margin: auto 15%; }
+.intro {
+  background: url(../img/bg-flower.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .intro .title {
+    position: relative;
+    top: 20%;
+    -webkit-transform: translateY(-20%);
+    -ms-transform: translateY(-20%);
+    transform: translateY(-20%); }
+    .intro .title h1 {
+      color: #515151;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 3em;
+      padding: 0px;
+      margin: auto 15%;
+      vertical-align: center;
+      letter-spacing: -2px; }
+    .intro .title h3 {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.5em;
+      color: #515151;
+      margin: auto 15%;
+      padding: 20px 0 70px; }
+    .intro .title p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-size: 1.2em;
+      color: #515151;
+      margin: auto 15%;
+      width: 37%;
+      padding: 10px 0;
+      letter-spacing: -0.5px; }
+    .intro .title .buttons {
+      margin: 15px 15%;
+      position: absolute;
+      bottom: -60%; }
+
+.skills {
+  background: #515151; }
+
+.projects {
+  background: #515151; }
+
+.btn {
+  text-decoration: none;
+  padding: 20px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  color: #fff; }
+
+.btn-border {
+  text-decoration: none;
+  padding: 20px 20px;
+  border-width: 2px;
+  border-color: #fc2d41;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  color: #515151; }
+
+.btn-red {
+  background: #fc2d41; }
+  .btn-red:hover {
+    background: #fb051d;
+    transition: all 0.3s ease; }
+  .btn-red:active {
+    background: #a70212; }
+
+.btn-red-border {
+  background: #fff; }
+  .btn-red-border:hover {
+    background: #ebebeb;
+    transition: all 0.3s ease; }
+  .btn-red-border:active {
+    background: #bfbfbf; }
