@@ -18,28 +18,57 @@ section {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-  .home .intro {
+  .home .title {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
-    .home .intro h1 {
+    .home .title h1 {
       color: #fff;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 3em;
       padding: 0px;
-      margin: auto 25%;
+      margin: auto 15%;
       vertical-align: center;
       text-align: right;
       letter-spacing: -2px; }
-    .home .intro p {
+    .home .title h3 {
       font-family: 'Open Sans', sans-serif;
       font-weight: 300;
       font-style: italic;
       font-size: 1.3em;
       color: #fff;
-      margin: auto 25%;
+      margin: auto 15%;
       padding-top: 5%;
       text-align: right; }
+
+.intro .title {
+  position: relative;
+  top: 20%;
+  -webkit-transform: translateY(-20%);
+  -ms-transform: translateY(-20%);
+  transform: translateY(-20%); }
+  .intro .title h1 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3em;
+    padding: 0px;
+    margin: auto 15%;
+    vertical-align: center;
+    letter-spacing: -2px; }
+  .intro .title h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1em;
+    color: #fff;
+    margin: auto 15%; }
+  .intro .title p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    color: #fff;
+    margin: auto 15%; }
