@@ -1,43 +1,51 @@
+//
 // Import
+//---------------------------------------------------
 
 //font
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic);
 
 //mixin
+@import 'mixins';
 
-@mixin vertical-align($position: relative) {
-  position: $position;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+
+
+
+//
+// Main styles
+//---------------------------------------------------
+
+*{
+	box-sizing: border-box; // fuckin love border box
 }
-
-
-
 
 html {
-	border: 12px solid #fff;
 	margin: 0;
-	
+}
+
+section{
+	height: 100vh;
+	width: 100%;
+	background-color: #333; // just to demonstrate
+	border: 12px solid white; // putting them on the sections not the html
 }
 
 
-.home {
-	height: 97.5%;
-	width: 98.5%;
-	margin: 0;
-	position: absolute;
-	background: url(../img/bg-mountains.jpg) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 
-		.intro {
-		float: right;
-		@include vertical-align();
+//
+// First section
+//---------------------------------------------------
+
+.home {
+	background: url(../img/bg-mountains.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	.title {
+	@include vertical-align();
 
 	  h1 {
 			color: #fff;
@@ -45,20 +53,64 @@ html {
 			font-weight: 700;
 			font-size: 3em;
 			padding: 0px;
-			margin: auto 25%;
+			margin: auto 15%;
 			vertical-align: center;
 			text-align: right;
 			letter-spacing: -2px;
 		}
-		p {
+		h3 {
 			font-family: 'Open Sans', sans-serif;
 			font-weight: 300;
 			font-style: italic;
 			font-size: 1.3em;
 			color: #fff;
-			margin: auto 25%;
+			margin: auto 15%;
 			padding-top: 5%;
 			text-align: right;
+		}
+
+	}
+
+}
+
+//
+// Seccond section
+//---------------------------------------------------
+
+.intro {
+	// background: url(../img/bg-mountains.jpg) no-repeat center center; 
+	// -webkit-background-size: cover;
+	// -moz-background-size: cover;
+	// -o-background-size: cover;
+	// background-size: cover;
+
+	.title {
+	@include top-align();
+
+	  h1 {
+			color: #fff;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 3em;
+			padding: 0px;
+			margin: auto 15%;
+			vertical-align: center;
+			letter-spacing: -2px;
+		}
+		h3 {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 300;
+			font-style: italic;
+			font-size: 1em;
+			color: #fff;
+			margin: auto 15%;
+		}
+		p {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 300;
+			font-size: 1em;
+			color: #fff;
+			margin: auto 15%;
 		}
 
 	}
