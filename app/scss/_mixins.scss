@@ -5,7 +5,7 @@
 // Center
 @mixin vertical-align($position: relative) {
   position: $position;
-  top: 50%;
+  top: 45%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -25,7 +25,17 @@
 // Styles
 //---------------------------------------------------
 
-
+// btn
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background:darken($bg,8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg,25%);
+  } 
+}
 
 
 
