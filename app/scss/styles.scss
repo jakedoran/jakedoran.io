@@ -113,12 +113,13 @@ section{
 		p {
 			font-family: 'Open Sans', sans-serif;
 			font-weight: 300;
-			font-size: $content-size;
 			color: $seccondary-color;
 			margin: auto 15%;
 			width: $content-width;
 			padding: 10px 0;
 			letter-spacing: -0.5px;
+			font-size: $content-size;
+			
 		}
 		.buttons {
 			margin: 15px 15%;
@@ -126,10 +127,11 @@ section{
 			bottom: -60%;
 
 		}
-
+		
 	}
 
 }
+
 
 
 
@@ -188,4 +190,15 @@ section{
 
 .btn-red-border {
    @include button-bg(#fff);
+}
+
+
+
+
+/* Using plain CSS */
+@media (max-width: 768px) {
+  p {
+  	font-size: 8px;
+  }
+  
 }

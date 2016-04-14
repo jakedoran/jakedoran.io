@@ -75,12 +75,12 @@ section {
     .intro .title p {
       font-family: 'Open Sans', sans-serif;
       font-weight: 300;
-      font-size: 1.2em;
       color: #515151;
       margin: auto 15%;
       width: 37%;
       padding: 10px 0;
-      letter-spacing: -0.5px; }
+      letter-spacing: -0.5px;
+      font-size: 1.2em; }
     .intro .title .buttons {
       margin: 15px 15%;
       position: absolute;
@@ -123,3 +123,8 @@ section {
     transition: all 0.3s ease; }
   .btn-red-border:active {
     background: #bfbfbf; }
+
+/* Using plain CSS */
+@media (max-width: 768px) {
+  p {
+    font-size: 8px; } }
