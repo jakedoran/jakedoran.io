@@ -117,15 +117,27 @@ section{
 			margin: auto 15%;
 			width: $content-width;
 			padding: 10px 0;
-			letter-spacing: -0.5px;
 			font-size: $content-size;
 			
 		}
 		.buttons {
-			margin: 15px 15%;
-			position: absolute;
-			bottom: -60%;
-
+			margin: 10% 15% 0px;
+			
+		}
+		.contact-icons {
+			margin: 60px 12.5% 0;
+			ul {
+				
+				li {
+					float: left;
+					list-style-type: none;
+					padding: 10px;
+					img {
+						max-width: 30px;
+					}
+				}
+				
+			}
 		}
 		
 	}
@@ -165,16 +177,16 @@ section{
 
 .btn {
  text-decoration:none;
- padding: 20px 20px;
+ padding: 20px 30px;
  font-family: 'Montserrat', sans-serif;
  font-size: $btn-size;
  color: #fff;
-
+ border: solid #fc2d41 2px;
 }
 
 .btn-border {
  text-decoration:none;
- padding: 20px 20px;
+ padding: 20px 30px;
  border-width: 2px;
  border-color: $flower-red;
  font-family: 'Montserrat', sans-serif;
@@ -189,7 +201,7 @@ section{
 }
 
 .btn-red-border {
-   @include button-bg(#fff);
+   @include button-bg-border(#fff);
 }
 
 

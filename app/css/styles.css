@@ -51,7 +51,7 @@ section {
   background-size: cover; }
   .intro .title {
     position: relative;
-    top: 20%;
+    top: 30%;
     -webkit-transform: translateY(-20%);
     -ms-transform: translateY(-20%);
     transform: translateY(-20%); }
@@ -69,22 +69,27 @@ section {
       font-weight: 300;
       font-style: italic;
       font-size: 1.5em;
-      color: #515151;
+      color: #000;
       margin: auto 15%;
       padding: 20px 0 70px; }
     .intro .title p {
       font-family: 'Open Sans', sans-serif;
       font-weight: 300;
-      color: #515151;
+      color: #000;
       margin: auto 15%;
       width: 37%;
       padding: 10px 0;
-      letter-spacing: -0.5px;
-      font-size: 1.2em; }
+      font-size: 1.1em; }
     .intro .title .buttons {
-      margin: 15px 15%;
-      position: absolute;
-      bottom: -60%; }
+      margin: 10% 15% 0px; }
+    .intro .title .contact-icons {
+      margin: 60px 12.5% 0; }
+      .intro .title .contact-icons ul li {
+        float: left;
+        list-style-type: none;
+        padding: 10px; }
+        .intro .title .contact-icons ul li img {
+          max-width: 30px; }
 
 .skills {
   background: #515151; }
@@ -94,14 +99,15 @@ section {
 
 .btn {
   text-decoration: none;
-  padding: 20px 20px;
+  padding: 20px 30px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1em;
-  color: #fff; }
+  color: #fff;
+  border: solid #fc2d41 2px; }
 
 .btn-border {
   text-decoration: none;
-  padding: 20px 20px;
+  padding: 20px 30px;
   border-width: 2px;
   border-color: #fc2d41;
   font-family: 'Montserrat', sans-serif;
@@ -117,7 +123,7 @@ section {
     background: #a70212; }
 
 .btn-red-border {
-  background: #fff; }
+  border: solid #fc2d41 2px; }
   .btn-red-border:hover {
     background: #ebebeb;
     transition: all 0.3s ease; }
