@@ -9,7 +9,7 @@ html {
 section {
   height: 100vh;
   width: 100%;
-  border: 12px solid white; }
+  border: 20px solid white; }
 
 .home {
   background: url(../img/bg-mountains.jpg) no-repeat center center;
@@ -44,14 +44,14 @@ section {
       text-align: right; }
 
 .intro {
-  background: url(../img/bg-flower.jpg) no-repeat center center;
+  background: url(../img/bg-flower-test.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
   .intro .title {
     position: relative;
-    top: 30%;
+    top: 20%;
     -webkit-transform: translateY(-20%);
     -ms-transform: translateY(-20%);
     transform: translateY(-20%); }
@@ -59,31 +59,40 @@ section {
       color: #515151;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      font-size: 3em;
+      font-size: 2.5em;
       padding: 0px;
-      margin: auto 15%;
+      margin: auto 7%;
       vertical-align: center;
       letter-spacing: -2px; }
     .intro .title h3 {
       font-family: 'Open Sans', sans-serif;
       font-weight: 300;
       font-style: italic;
-      font-size: 1.5em;
+      font-size: 1em;
       color: #000;
-      margin: auto 15%;
-      padding: 20px 0 70px; }
+      margin: auto 7%;
+      padding: 0 0 30px; }
+    .intro .title h4 {
+      color: #515151;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.2em;
+      padding: 0px;
+      margin: 10px 7%;
+      vertical-align: center;
+      letter-spacing: -2px; }
     .intro .title p {
       font-family: 'Open Sans', sans-serif;
       font-weight: 300;
       color: #000;
-      margin: auto 15%;
+      margin: auto 7%;
       width: 37%;
       padding: 10px 0;
-      font-size: 1.1em; }
+      font-size: 1em; }
     .intro .title .buttons {
-      margin: 10% 15% 0px; }
+      margin: 5% 7%; }
     .intro .title .contact-icons {
-      margin: 60px 12.5% 0; }
+      margin: 0 5% 0; }
       .intro .title .contact-icons ul li {
         float: left;
         list-style-type: none;
@@ -92,14 +101,105 @@ section {
           max-width: 30px; }
 
 .skills {
-  background: #515151; }
+  background: url(../img/bg-shrine-test.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .skills .title {
+    position: relative;
+    top: 20%;
+    -webkit-transform: translateY(-20%);
+    -ms-transform: translateY(-20%);
+    transform: translateY(-20%);
+    max-width: 50%;
+    float: right; }
+    .skills .title h1 {
+      color: #515151;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2.5em;
+      padding: 0px;
+      margin: auto 15%;
+      vertical-align: center;
+      letter-spacing: -2px; }
+    .skills .title h3 {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1em;
+      color: #000;
+      margin: auto 15%;
+      padding: 20px 0 70px; }
+    .skills .title p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      color: #000;
+      margin: auto 15%;
+      padding: 10px 0;
+      font-size: 1em; }
+    .skills .title .buttons {
+      margin: 10% 15% 0px; }
+    .skills .title .contact-icons {
+      margin: 60px 12.5% 0; }
+      .skills .title .contact-icons ul li {
+        float: left;
+        list-style-type: none;
+        padding: 10px; }
+        .skills .title .contact-icons ul li img {
+          max-width: 30px; }
 
 .projects {
-  background: #515151; }
+  background: url(../img/bg-yamagata.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .projects .title {
+    position: relative;
+    top: 15%;
+    -webkit-transform: translateY(-20%);
+    -ms-transform: translateY(-20%);
+    transform: translateY(-20%); }
+    .projects .title h1 {
+      color: #515151;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2.5em;
+      padding: 0px;
+      margin: auto 15%;
+      vertical-align: center;
+      letter-spacing: -2px; }
+    .projects .title h3 {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1em;
+      color: #000;
+      margin: auto 15%;
+      padding: 20px 0 70px; }
+    .projects .title p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      color: #000;
+      margin: auto 15%;
+      width: 37%;
+      padding: 10px 0;
+      font-size: 1em; }
+    .projects .title .buttons {
+      margin: 10% 15% 0px; }
+    .projects .title .contact-icons {
+      margin: 60px 12.5% 0; }
+      .projects .title .contact-icons ul li {
+        float: left;
+        list-style-type: none;
+        padding: 10px; }
+        .projects .title .contact-icons ul li img {
+          max-width: 30px; }
 
 .btn {
   text-decoration: none;
-  padding: 20px 30px;
+  padding: 15px 20px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1em;
   color: #fff;
@@ -107,7 +207,7 @@ section {
 
 .btn-border {
   text-decoration: none;
-  padding: 20px 30px;
+  padding: 15px 20px;
   border-width: 2px;
   border-color: #fc2d41;
   font-family: 'Montserrat', sans-serif;
@@ -134,3 +234,6 @@ section {
 @media (max-width: 768px) {
   p {
     font-size: 8px; } }
+
+.right {
+  float: right; }
