@@ -11,6 +11,15 @@
   transform: translateY(-50%);
 }
 
+// middle top
+@mixin middle-top-align($position: relative) {
+  position: $position;
+  top: 35%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 // Top
 @mixin top-align($position: relative) {
   position: $position;

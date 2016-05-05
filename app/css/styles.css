@@ -191,7 +191,7 @@ body:after {
   background-size: cover; }
   .projects .title {
     position: relative;
-    top: 15%;
+    top: 20%;
     -webkit-transform: translateY(-20%);
     -ms-transform: translateY(-20%);
     transform: translateY(-20%); }
@@ -201,62 +201,72 @@ body:after {
       font-weight: 700;
       font-size: 2.5em;
       padding: 0px;
-      margin: auto 15%;
+      margin: 30px 7% 50px;
       vertical-align: center;
       letter-spacing: -2px; }
-    .projects .title .project-copy h1 {
-      color: #515151;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 2.5em;
-      padding: 0px;
-      margin: auto 15%;
-      vertical-align: center;
-      letter-spacing: -2px; }
-    .projects .title .project-copy h2 {
-      color: #515151;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 1.2em;
-      padding: 0px;
-      margin: auto 15%;
-      vertical-align: center;
-      letter-spacing: -2px; }
-    .projects .title .project-copy h3 {
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 300;
-      font-style: italic;
-      font-size: 1.2em;
-      color: #000;
-      margin: auto 15%;
-      padding: 20px 0 70px; }
-    .projects .title .project-copy p {
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 300;
-      color: #000;
-      margin: auto 15%;
-      width: 37%;
-      padding: 10px 0;
-      font-size: 1em; }
-      .projects .title .project-copy p span {
-        color: #fc2d41; }
-    .projects .title .project-copy a {
-      text-decoration: none;
-      padding: 15px 20px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1em;
-      color: #fc2d41;
-      margin: auto 13.5%; }
-    .projects .title .buttons {
-      margin: 2% 15% 0px; }
-    .projects .title .contact-icons {
-      margin: 60px 12.5% 0; }
-      .projects .title .contact-icons ul li {
-        float: left;
-        list-style-type: none;
-        padding: 10px; }
-        .projects .title .contact-icons ul li img {
-          max-width: 30px; }
+    .projects .title .project-copy {
+      margin-bottom: 5%; }
+      .projects .title .project-copy h1 {
+        color: #515151;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 2.5em;
+        padding: 0px;
+        margin: auto 7%;
+        vertical-align: center;
+        letter-spacing: -2px; }
+      .projects .title .project-copy h2 {
+        color: #515151;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 1.2em;
+        padding: 0px;
+        margin: auto 7%;
+        vertical-align: center;
+        letter-spacing: -2px; }
+      .projects .title .project-copy h3 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 1.2em;
+        color: #000;
+        margin: auto 7%;
+        padding: 20px 0 70px; }
+      .projects .title .project-copy p {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        color: #000;
+        margin: auto 7%;
+        width: 37%;
+        padding: 10px 0;
+        font-size: 1em; }
+      .projects .title .project-copy a {
+        text-decoration: none;
+        padding: 15px 20px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1em;
+        color: #fc2d41;
+        margin: auto 7%; }
+      .projects .title .project-copy .project-date p {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        color: #000;
+        margin: auto 7%;
+        width: 37%;
+        padding: 10px 0;
+        font-size: 0.5em; }
+        .projects .title .project-copy .project-date p span {
+          color: #fc2d41; }
+  .projects .buttons {
+    margin: 2% 15% 0px; }
+  .projects .contact-icons {
+    margin: 60px 12.5% 0; }
+    .projects .contact-icons ul li {
+      float: left;
+      list-style-type: none;
+      padding: 10px; }
+      .projects .contact-icons ul li img {
+        max-width: 30px; }
 
 .contact {
   background: url(../img/bg-yamagata.jpg) no-repeat center center;
@@ -332,6 +342,44 @@ body:after {
         padding: 10px; }
         .contact .title .contact-icons ul li img {
           max-width: 30px; }
+
+.tnm-header {
+  background: url(../img/bg-tnm.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .tnm-header .title {
+    position: relative;
+    top: 35%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    .tnm-header .title h1 {
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 3em;
+      padding: 0px;
+      margin: auto 7%;
+      vertical-align: center;
+      letter-spacing: -2px; }
+    .tnm-header .title p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-style: italic;
+      color: #fff;
+      margin: auto 7%;
+      width: 37%;
+      padding: 10px 0;
+      font-size: 1em; }
+
+.tnm-about {
+  background-color: #f5f6f8;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 .btn {
   text-decoration: none;
