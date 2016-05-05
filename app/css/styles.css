@@ -102,7 +102,7 @@ body:after {
       font-family: 'Open Sans', sans-serif;
       font-weight: 300;
       font-style: italic;
-      font-size: 1em;
+      font-size: 1.2em;
       color: #000;
       margin: auto 7%;
       padding: 0 0 30px; }
@@ -161,7 +161,7 @@ body:after {
       font-family: 'Open Sans', sans-serif;
       font-weight: 300;
       font-style: italic;
-      font-size: 1em;
+      font-size: 1.2em;
       color: #000;
       margin: auto 15%;
       padding: 20px 0 70px; }
@@ -204,15 +204,33 @@ body:after {
       margin: auto 15%;
       vertical-align: center;
       letter-spacing: -2px; }
-    .projects .title h3 {
+    .projects .title .project-copy h1 {
+      color: #515151;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2.5em;
+      padding: 0px;
+      margin: auto 15%;
+      vertical-align: center;
+      letter-spacing: -2px; }
+    .projects .title .project-copy h2 {
+      color: #515151;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.2em;
+      padding: 0px;
+      margin: auto 15%;
+      vertical-align: center;
+      letter-spacing: -2px; }
+    .projects .title .project-copy h3 {
       font-family: 'Open Sans', sans-serif;
       font-weight: 300;
       font-style: italic;
-      font-size: 1em;
+      font-size: 1.2em;
       color: #000;
       margin: auto 15%;
       padding: 20px 0 70px; }
-    .projects .title p {
+    .projects .title .project-copy p {
       font-family: 'Open Sans', sans-serif;
       font-weight: 300;
       color: #000;
@@ -220,8 +238,17 @@ body:after {
       width: 37%;
       padding: 10px 0;
       font-size: 1em; }
+      .projects .title .project-copy p span {
+        color: #fc2d41; }
+    .projects .title .project-copy a {
+      text-decoration: none;
+      padding: 15px 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1em;
+      color: #fc2d41;
+      margin: auto 13.5%; }
     .projects .title .buttons {
-      margin: 10% 15% 0px; }
+      margin: 2% 15% 0px; }
     .projects .title .contact-icons {
       margin: 60px 12.5% 0; }
       .projects .title .contact-icons ul li {
@@ -229,6 +256,81 @@ body:after {
         list-style-type: none;
         padding: 10px; }
         .projects .title .contact-icons ul li img {
+          max-width: 30px; }
+
+.contact {
+  background: url(../img/bg-yamagata.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .contact .title {
+    position: relative;
+    top: 15%;
+    -webkit-transform: translateY(-20%);
+    -ms-transform: translateY(-20%);
+    transform: translateY(-20%); }
+    .contact .title h1 {
+      color: #515151;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2.5em;
+      padding: 0px;
+      margin: auto 15%;
+      vertical-align: center;
+      letter-spacing: -2px; }
+    .contact .title .project-copy h1 {
+      color: #515151;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2.5em;
+      padding: 0px;
+      margin: auto 15%;
+      vertical-align: center;
+      letter-spacing: -2px; }
+    .contact .title .project-copy h2 {
+      color: #515151;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.2em;
+      padding: 0px;
+      margin: auto 15%;
+      vertical-align: center;
+      letter-spacing: -2px; }
+    .contact .title .project-copy h3 {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.2em;
+      color: #000;
+      margin: auto 15%;
+      padding: 20px 0 70px; }
+    .contact .title .project-copy p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      color: #000;
+      margin: auto 15%;
+      width: 37%;
+      padding: 10px 0;
+      font-size: 1em; }
+      .contact .title .project-copy p span {
+        color: #fc2d41; }
+    .contact .title .project-copy a {
+      text-decoration: none;
+      padding: 15px 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1em;
+      color: #fc2d41;
+      margin: auto 13.5%; }
+    .contact .title .buttons {
+      margin: 2% 15% 0px; }
+    .contact .title .contact-icons {
+      margin: 60px 12.5% 0; }
+      .contact .title .contact-icons ul li {
+        float: left;
+        list-style-type: none;
+        padding: 10px; }
+        .contact .title .contact-icons ul li img {
           max-width: 30px; }
 
 .btn {

@@ -286,37 +286,175 @@ body:after{
 	.title {
 	@include verytop-align();
 
-	  h1 {
-			color: $primary-color;
-			font-family: 'Montserrat', sans-serif;
-			font-weight: 700;
-			font-size: $heading-size;
-			padding: 0px;
-			margin: auto 15%;
-			vertical-align: center;
-			letter-spacing: -2px;
-		}
-		h3 {
-			font-family: 'Open Sans', sans-serif;
-			font-weight: 300;
-			font-style: italic;
-			font-size: $subheading-size;
-			color: $seccondary-color;
-			margin: auto 15%;
-			padding: 20px 0 70px;
-		}
-		p {
-			font-family: 'Open Sans', sans-serif;
-			font-weight: 300;
-			color: $seccondary-color;
-			margin: auto 15%;
-			width: $content-width;
-			padding: 10px 0;
-			font-size: $content-size;
+		h1 {
+				color: $primary-color;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 700;
+				font-size: $heading-size;
+				padding: 0px;
+				margin: auto 15%;
+				vertical-align: center;
+				letter-spacing: -2px;
+			}
+			.project-copy {
+			h1  { 
+				color: $primary-color;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 700;
+				font-size: $heading-size;
+				padding: 0px;
+				margin: auto 15%;
+				vertical-align: center;
+				letter-spacing: -2px;
+			}
+			h2  {
+				color: $primary-color;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 700;
+				font-size: $subheading-size;
+				padding: 0px;
+				margin: auto 15%;
+				vertical-align: center;
+				letter-spacing: -2px;
+			}
+			h3 {
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 300;
+				font-style: italic;
+				font-size: $subheading-size;
+				color: $seccondary-color;
+				margin: auto 15%;
+				padding: 20px 0 70px;
+			}
+			p {
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 300;
+				color: $seccondary-color;
+				margin: auto 15%;
+				width: $content-width;
+				padding: 10px 0;
+				font-size: $content-size;
+				span {
+					color: $flower-red;
+				}	
+			}
+			a {
+				text-decoration:none;
+				padding: 15px 20px;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 1em;
+				color: $flower-red;
+				margin: auto 13.5%;
+
+			}
+	}
+
+	  
+		.buttons {
+			margin: 2% 15% 0px;
 			
 		}
+		.contact-icons {
+			margin: 60px 12.5% 0;
+			ul {
+				
+				li {
+					float: left;
+					list-style-type: none;
+					padding: 10px;
+					img {
+						max-width: 30px;
+					}
+				}
+				
+			}
+		}
+		
+	}
+}
+
+
+//
+// Fourth section
+//---------------------------------------------------
+
+
+.contact {
+	background: url(../img/bg-yamagata.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	.title {
+	@include verytop-align();
+
+		h1 {
+				color: $primary-color;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 700;
+				font-size: $heading-size;
+				padding: 0px;
+				margin: auto 15%;
+				vertical-align: center;
+				letter-spacing: -2px;
+			}
+			.project-copy {
+			h1  { 
+				color: $primary-color;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 700;
+				font-size: $heading-size;
+				padding: 0px;
+				margin: auto 15%;
+				vertical-align: center;
+				letter-spacing: -2px;
+			}
+			h2  {
+				color: $primary-color;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 700;
+				font-size: $subheading-size;
+				padding: 0px;
+				margin: auto 15%;
+				vertical-align: center;
+				letter-spacing: -2px;
+			}
+			h3 {
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 300;
+				font-style: italic;
+				font-size: $subheading-size;
+				color: $seccondary-color;
+				margin: auto 15%;
+				padding: 20px 0 70px;
+			}
+			p {
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 300;
+				color: $seccondary-color;
+				margin: auto 15%;
+				width: $content-width;
+				padding: 10px 0;
+				font-size: $content-size;
+				span {
+					color: $flower-red;
+				}	
+			}
+			a {
+				text-decoration:none;
+				padding: 15px 20px;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 1em;
+				color: $flower-red;
+				margin: auto 13.5%;
+
+			}
+	}
+
+	  
 		.buttons {
-			margin: 10% 15% 0px;
+			margin: 2% 15% 0px;
 			
 		}
 		.contact-icons {
