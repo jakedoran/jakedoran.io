@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,300,300italic,400italic);
 * {
   box-sizing: border-box; }
 
@@ -85,48 +85,58 @@ body:after {
   background-size: cover; }
   .intro .title {
     position: relative;
-    top: 20%;
+    top: 30%;
     -webkit-transform: translateY(-20%);
     -ms-transform: translateY(-20%);
-    transform: translateY(-20%); }
+    transform: translateY(-20%);
+    max-width: 80%; }
     .intro .title h1 {
       color: #515151;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 2.5em;
       padding: 0px;
-      margin: auto 7%;
+      margin: auto 10%;
       vertical-align: center;
       letter-spacing: -2px; }
     .intro .title h3 {
       font-family: 'Open Sans', sans-serif;
-      font-weight: 300;
+      font-weight: 400;
       font-style: italic;
-      font-size: 1.2em;
+      font-size: 1em;
       color: #000;
-      margin: auto 7%;
+      margin: auto 10%;
       padding: 0 0 30px; }
     .intro .title h4 {
       color: #515151;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      font-size: 1.2em;
+      font-size: 1em;
       padding: 0px;
-      margin: 10px 7%;
+      margin: 40px 10% 0;
       vertical-align: center;
-      letter-spacing: -2px; }
+      letter-spacing: -1px; }
+    .intro .title h5 {
+      color: #515151;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.4em;
+      padding: 0px;
+      margin: 40px 10% 0;
+      vertical-align: center;
+      letter-spacing: -1px; }
     .intro .title p {
       font-family: 'Open Sans', sans-serif;
-      font-weight: 300;
+      font-weight: 400;
       color: #000;
-      margin: auto 7%;
+      margin: auto 10%;
       width: 37%;
       padding: 10px 0;
-      font-size: 1em; }
+      font-size: 0.9em; }
     .intro .title .buttons {
-      margin: 5% 7%; }
+      margin: 5% 10%; }
     .intro .title .contact-icons {
-      margin: 0 5% 0; }
+      margin: 0 6.5% 0; }
       .intro .title .contact-icons ul li {
         float: left;
         list-style-type: none;
@@ -142,7 +152,7 @@ body:after {
   background-size: cover; }
   .skills .title {
     position: relative;
-    top: 20%;
+    top: 30%;
     -webkit-transform: translateY(-20%);
     -ms-transform: translateY(-20%);
     transform: translateY(-20%);
@@ -171,7 +181,7 @@ body:after {
       color: #000;
       margin: auto 15%;
       padding: 10px 0;
-      font-size: 1em; }
+      font-size: 0.9em; }
     .skills .title .buttons {
       margin: 10% 15% 0px; }
     .skills .title .contact-icons {
@@ -191,7 +201,7 @@ body:after {
   background-size: cover; }
   .projects .title {
     position: relative;
-    top: 20%;
+    top: 30%;
     -webkit-transform: translateY(-20%);
     -ms-transform: translateY(-20%);
     transform: translateY(-20%); }
@@ -239,7 +249,7 @@ body:after {
         margin: auto 7%;
         width: 37%;
         padding: 10px 0;
-        font-size: 1em; }
+        font-size: 0.9em; }
       .projects .title .project-copy a {
         text-decoration: none;
         padding: 15px 20px;
@@ -322,7 +332,7 @@ body:after {
       margin: auto 15%;
       width: 37%;
       padding: 10px 0;
-      font-size: 1em; }
+      font-size: 0.9em; }
       .contact .title .project-copy p span {
         color: #fc2d41; }
     .contact .title .project-copy a {
@@ -372,7 +382,7 @@ body:after {
       margin: auto 7%;
       width: 37%;
       padding: 10px 0;
-      font-size: 1em; }
+      font-size: 0.9em; }
 
 .tnm-about {
   background-color: #f5f6f8;
@@ -382,7 +392,7 @@ body:after {
   background-size: cover; }
   .tnm-about .title {
     position: relative;
-    top: 20%;
+    top: 30%;
     -webkit-transform: translateY(-20%);
     -ms-transform: translateY(-20%);
     transform: translateY(-20%);
@@ -410,7 +420,7 @@ body:after {
       color: #000;
       margin: auto 15%;
       padding: 10px 0;
-      font-size: 1em; }
+      font-size: 0.9em; }
     .tnm-about .title .buttons {
       margin: 10% 15% 0px; }
     .tnm-about .title .contact-icons {
@@ -424,36 +434,35 @@ body:after {
 
 .btn {
   text-decoration: none;
-  padding: 15px 20px;
+  padding: 15px 32px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
+  font-size: 0.8em;
   color: #fff;
   border: solid #fc2d41 2px; }
 
 .btn-border {
   text-decoration: none;
-  padding: 15px 20px;
+  padding: 15px 23px;
   border-width: 2px;
   border-color: #fc2d41;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
+  font-size: 0.8em;
   color: #515151; }
 
 .btn-red {
-  background: #fc2d41; }
-  .btn-red:hover {
-    background: #fb051d;
-    transition: all 0.3s ease; }
+  background: #fc2d41;
+  margin-right: 10px; }
   .btn-red:active {
     background: #a70212; }
 
 .btn-red-border {
   border: solid #fc2d41 2px; }
   .btn-red-border:hover {
-    background: #ebebeb;
-    transition: all 0.3s ease; }
+    background-color: #fc2d41;
+    transition: all 0.3s ease;
+    color: #fff; }
   .btn-red-border:active {
-    background: #bfbfbf; }
+    background-color: #fc2d41; }
 
 /* Using plain CSS */
 @media (max-width: 768px) {
