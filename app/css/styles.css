@@ -380,6 +380,47 @@ body:after {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+  .tnm-about .title {
+    position: relative;
+    top: 20%;
+    -webkit-transform: translateY(-20%);
+    -ms-transform: translateY(-20%);
+    transform: translateY(-20%);
+    max-width: 50%; }
+    .tnm-about .title h1 {
+      color: #515151;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2.5em;
+      padding: 0px;
+      margin: auto 15%;
+      vertical-align: center;
+      letter-spacing: -2px; }
+    .tnm-about .title h3 {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.2em;
+      color: #000;
+      margin: auto 15%;
+      padding: 20px 0 70px; }
+    .tnm-about .title p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      color: #000;
+      margin: auto 15%;
+      padding: 10px 0;
+      font-size: 1em; }
+    .tnm-about .title .buttons {
+      margin: 10% 15% 0px; }
+    .tnm-about .title .contact-icons {
+      margin: 60px 12.5% 0; }
+      .tnm-about .title .contact-icons ul li {
+        float: left;
+        list-style-type: none;
+        padding: 10px; }
+        .tnm-about .title .contact-icons ul li img {
+          max-width: 30px; }
 
 .btn {
   text-decoration: none;
