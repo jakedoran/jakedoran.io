@@ -648,9 +648,20 @@ body:after{
 				
 			}
 		}
-		
+		.tnm-screen {
+			@include projects-screen();
+			display: block;
+			max-width: 40%;
+			float: right;
+			img {
+				max-width: 1000px;
+			}
+			
+		}
 	}
 }
+
+
 
 //
 // Other styles

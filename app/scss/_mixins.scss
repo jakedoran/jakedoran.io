@@ -47,6 +47,14 @@
   transform: translateY(-20%);
 }
 
+@mixin projects-screen($position: relative) {
+  position: $position;
+  top: 20%;
+  -webkit-transform: translateY(-80%);
+  -ms-transform: translateY(-80%);
+  transform: translateY(-80%);
+}
+
 
 //
 // Styles

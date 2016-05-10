@@ -470,6 +470,17 @@ body:after {
         padding: 10px; }
         .tnm-about .title .contact-icons ul li img {
           max-width: 30px; }
+    .tnm-about .title .tnm-screen {
+      position: relative;
+      top: 20%;
+      -webkit-transform: translateY(-80%);
+      -ms-transform: translateY(-80%);
+      transform: translateY(-80%);
+      display: block;
+      max-width: 40%;
+      float: right; }
+      .tnm-about .title .tnm-screen img {
+        max-width: 1000px; }
 
 .btn {
   text-decoration: none;
