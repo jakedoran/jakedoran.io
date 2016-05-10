@@ -12,6 +12,50 @@
 //variables
 @import 'variables';
 
+@font-face {
+    font-family: 'folio-icons';
+    src:    url('../fonts/folio-icons.eot?h8j23h');
+    src:    url('../fonts/folio-icons.eot?h8j23h#iefix') format('embedded-opentype'),
+        url('../fonts/folio-icons.ttf?h8j23h') format('truetype'),
+        url('../fonts/folio-icons.woff?h8j23h') format('woff'),
+        url('../fonts/folio-icons.svg?h8j23h#folio-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'folio-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+    content: "\f099";
+}
+.icon-github:before {
+    content: "\f09b";
+}
+.icon-linkedin:before {
+    content: "\f0e1";
+}
+.icon-circle:before {
+    content: "\f111";
+}
+.icon-genderless:before {
+    content: "\f22d";
+}
+
+
+
 
 
 
@@ -82,7 +126,7 @@ body:after{
 //---------------------------------------------------
 
 .home {
-	background: url(../img/bg-mountains.jpg) no-repeat center center; 
+	background: url(../img/bg-home.jpg) no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -92,7 +136,7 @@ body:after{
 	@include vertical-align();
 
 	  h1 {
-			color: #fff;
+			color: #000;
 			font-family: 'Montserrat', sans-serif;
 			font-weight: 700;
 			font-size: 3em;
@@ -134,7 +178,7 @@ body:after{
 	@include top-align();
 	max-width: 80%;
 	  h1 {
-			color: $primary-color;
+			color: $heading-color;
 			font-family: 'Montserrat', sans-serif;
 			font-weight: 700;
 			font-size: $heading-size;
@@ -148,7 +192,7 @@ body:after{
 			font-weight: 400;
 			font-style: italic;
 			font-size: 1em;
-			color: $seccondary-color;
+			color: $heading-color;
 			margin: auto 10%;
 			padding: 0 0 30px;
 		}
@@ -163,7 +207,7 @@ body:after{
 			letter-spacing: -1px;
 		}
 		h5 {
-			color: $primary-color;
+			color: $heading-color;
 			font-family: 'Montserrat', sans-serif;
 			font-weight: 700;
 			font-size: 1.4em;
@@ -181,6 +225,14 @@ body:after{
 			padding: 10px 0;
 			font-size: $content-size;
 			
+		}
+		.rotation {
+			p {
+				padding: 2px 0;
+			}
+			h4 {
+				margin-top: 15px;
+			}
 		}
 		.buttons {
 			margin: 5% 10%;
@@ -227,7 +279,7 @@ body:after{
 	float: right;
 	
 	  h1 {
-			color: $primary-color;
+			color: $heading-color;
 			font-family: 'Montserrat', sans-serif;
 			font-weight: 700;
 			font-size: $heading-size;
@@ -297,7 +349,7 @@ body:after{
 	@include top-align();
 
 		h1 {
-				color: $primary-color;
+				color: $heading-color;
 				font-family: 'Montserrat', sans-serif;
 				font-weight: 700;
 				font-size: $heading-size;
@@ -307,7 +359,7 @@ body:after{
 				letter-spacing: -2px;
 			}
 			.project-copy {
-				margin-bottom: 5%;
+				margin-bottom: 3%;
 
 				h1 {
 				color: $primary-color;
@@ -353,9 +405,10 @@ body:after{
 					font-family: 'Montserrat', sans-serif;
 					font-size: 1em;
 					color: $flower-red;
-					margin: auto 7%;
+					margin: auto 6%;
 
 				}
+
 				.project-date {
 					p {
 						font-family: 'Open Sans', sans-serif;
@@ -365,11 +418,13 @@ body:after{
 						width: $content-width;
 						padding: 10px 0;
 						font-size: 0.5em;
+						
 
-					span {
+					span p {
 						color: $flower-red;
 						}	
 					}
+					
 				}
 			}
 		}
@@ -378,22 +433,15 @@ body:after{
 			margin: 2% 15% 0px;
 			
 		}
-		.contact-icons {
-			margin: 60px 12.5% 0;
-			ul {
-				
-				li {
-					float: left;
-					list-style-type: none;
-					padding: 10px;
-					img {
-						max-width: 30px;
-					}
-				}
-				
-			}
+		.icon {
+			font-size: 0.5em;
+			padding: 8px;
 		}
 		
+		.bold-red {
+			color: $primary-color;
+			font-weight: 700;
+		}
 	}
 
 
@@ -510,7 +558,7 @@ body:after{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-
+	
 	.title {
 	@include middle-top-align();
 
@@ -526,13 +574,13 @@ body:after{
 		}
 		p {
 			font-family: 'Open Sans', sans-serif;
-			font-weight: 300;
+			font-weight: 400;
 			font-style: italic;
 			color: #fff;
 			margin: auto 7%;
 			width: $content-width;
 			padding: 10px 0;
-			font-size: $content-size;
+			font-size: 1em;
 		}
 	}
 }
@@ -544,17 +592,17 @@ body:after{
 	-o-background-size: cover;
 	background-size: cover;
 	.title {
-	@include top-align();
-	max-width: 50%;
+	@include projects-align();
+	max-width: 80%;
 	
 	
-	  h1 {
-			color: $primary-color;
+	  	h1 {
+			color: $heading-color;
 			font-family: 'Montserrat', sans-serif;
 			font-weight: 700;
 			font-size: $heading-size;
-			padding: 0px;
-			margin: auto 15%;
+			// padding: 0 0 30px;
+			margin: auto 10%;
 			vertical-align: center;
 			letter-spacing: -2px;
 		}
@@ -564,21 +612,25 @@ body:after{
 			font-style: italic;
 			font-size: $subheading-size;
 			color: $seccondary-color;
-			margin: auto 15%;
+			margin: auto 10%;
 			padding: 20px 0 70px;
 		}
 		p {
 			font-family: 'Open Sans', sans-serif;
-			font-weight: 300;
+			font-weight: 400;
 			color: $seccondary-color;
-			margin: auto 15%;
-			//width: $content-width;
+			margin: auto 10%;
+			width: $content-width;
 			padding: 10px 0;
 			font-size: $content-size;
 			
 		}
+		.heading-room {
+			padding-bottom: 30px;
+		}
+
 		.buttons {
-			margin: 10% 15% 0px;
+			margin: 5% 10%;
 			
 		}
 		.contact-icons {
