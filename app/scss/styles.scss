@@ -4,13 +4,57 @@
 
 //font
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,300,300italic,400italic);
 
 //mixins
 @import 'mixins';
 
 //variables
 @import 'variables';
+
+@font-face {
+    font-family: 'folio-icons';
+    src:    url('../fonts/folio-icons.eot?h8j23h');
+    src:    url('../fonts/folio-icons.eot?h8j23h#iefix') format('embedded-opentype'),
+        url('../fonts/folio-icons.ttf?h8j23h') format('truetype'),
+        url('../fonts/folio-icons.woff?h8j23h') format('woff'),
+        url('../fonts/folio-icons.svg?h8j23h#folio-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'folio-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+    content: "\f099";
+}
+.icon-github:before {
+    content: "\f09b";
+}
+.icon-linkedin:before {
+    content: "\f0e1";
+}
+.icon-circle:before {
+    content: "\f111";
+}
+.icon-genderless:before {
+    content: "\f22d";
+}
+
+
 
 
 
@@ -27,10 +71,62 @@ html {
 	margin: 0;
 }
 
+
+
 section{
 	height: 100vh;
 	width: 100%;
-	border: 12px solid white; // putting them on the sections not the html
+	// border: 20px solid white; // putting them on the sections not the html
+
+}
+
+footer {
+	height: 6vh;
+	max-width: 100%;
+	background-color: #F5F6F8;
+	h1 {
+		margin: auto;
+		padding-top: 5px;
+	}
+}
+
+/*------------------------------------*\
+    BORDERS
+\*------------------------------------*/
+
+/* Create a series of empty pseudo-elements... */
+html:before,html:after,body:before,body:after{
+    content:"";
+    background:#fff;
+    position:fixed;
+    display:block;
+    z-index:5;
+}
+
+/* ...and position them! */
+html:before{
+    height:20px;
+    left:0;
+    right:0;
+    top:0;
+}
+html:after{
+    width:20px;
+    top:0;
+    right:0;
+    bottom:0;
+}
+body:before{
+    height:20px;
+    right:0;
+    bottom:0;
+    left:0;
+}
+body:after{
+    width:20px;
+    top:0;
+    bottom:0;
+    left:0;
 }
 
 
@@ -40,7 +136,7 @@ section{
 //---------------------------------------------------
 
 .home {
-	background: url(../img/bg-mountains.jpg) no-repeat center center; 
+	background: url(../img/bg-home.jpg) no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -50,7 +146,7 @@ section{
 	@include vertical-align();
 
 	  h1 {
-			color: #fff;
+			color: #000;
 			font-family: 'Montserrat', sans-serif;
 			font-weight: 700;
 			font-size: 3em;
@@ -82,7 +178,7 @@ section{
 //---------------------------------------------------
 
 .intro {
-	background: url(../img/bg-flower.jpg) no-repeat center center; 
+	background: url(../img/bg-flower-test.jpg) no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -90,46 +186,88 @@ section{
 
 	.title {
 	@include top-align();
-
+	max-width: 80%;
 	  h1 {
-			color: $primary-color;
+			color: $heading-color;
 			font-family: 'Montserrat', sans-serif;
 			font-weight: 700;
 			font-size: $heading-size;
 			padding: 0px;
-			margin: auto 15%;
+			margin: auto 10%;
 			vertical-align: center;
 			letter-spacing: -2px;
 		}
 		h3 {
 			font-family: 'Open Sans', sans-serif;
-			font-weight: 300;
+			font-weight: 400;
 			font-style: italic;
-			font-size: $subheading-size;
-			color: $seccondary-color;
-			margin: auto 15%;
-			padding: 20px 0 70px;
+			font-size: 1em;
+			color: $heading-color;
+			margin: auto 10%;
+			padding: 0 0 30px;
+		}
+		h4 {
+			color: $primary-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1em;
+			padding: 0px;
+			margin: 40px 10% 0;
+			vertical-align: center;
+			letter-spacing: -1px;
+		}
+		h5 {
+			color: $heading-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1.4em;
+			padding: 0px;
+			margin: 40px 10% 0;
+			vertical-align: center;
+			letter-spacing: -1px;
 		}
 		p {
 			font-family: 'Open Sans', sans-serif;
-			font-weight: 300;
-			font-size: $content-size;
+			font-weight: 400;
 			color: $seccondary-color;
-			margin: auto 15%;
+			margin: auto 10%;
 			width: $content-width;
 			padding: 10px 0;
-			letter-spacing: -0.5px;
+			font-size: $content-size;
+			
+		}
+		.rotation {
+			p {
+				padding: 2px 0;
+			}
+			h4 {
+				margin-top: 15px;
+			}
 		}
 		.buttons {
-			margin: 15px 15%;
-			position: absolute;
-			bottom: -60%;
-
+			margin: 5% 10%;
+			
 		}
-
+		.contact-icons {
+			margin: 0 6.5% 0;
+			ul {
+				
+				li {
+					float: left;
+					list-style-type: none;
+					padding: 10px;
+					img {
+						max-width: 30px;
+					}
+				}
+				
+			}
+		}
+		
 	}
 
 }
+
 
 
 
@@ -139,7 +277,141 @@ section{
 
 
 .skills {
-	background: #515151;
+	background: url(../img/bg-shrine-test.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	.title {
+	@include top-align();
+	float: right;
+	max-width: 650px;
+	margin-right: 8%;
+	  h1 {
+			color: $heading-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: $heading-size;
+			padding: 0px;
+			margin: auto 2%;
+			vertical-align: center;
+			letter-spacing: -2px;
+		}
+		h3 {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-style: italic;
+			font-size: 1em;
+			color: $heading-color;
+			margin: auto 2%;
+			padding: 0 0 30px;
+		}
+		h4 {
+			color: $primary-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1em;
+			padding: 0px;
+			margin: 40px 10% 0;
+			vertical-align: center;
+			letter-spacing: -1px;
+		}
+		h5 {
+			color: $heading-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1.4em;
+			padding: 0px;
+			margin: 40px 10% 0;
+			vertical-align: center;
+			letter-spacing: -1px;
+		}
+		p {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			color: $seccondary-color;
+			margin: auto 10%;
+			padding: 10px 0;
+			font-size: $content-size;
+			
+		}
+		hr {
+			border-bottom: 2px solid #656565;
+			border-left: none;
+			border-right: none;
+			border-top: none;
+			margin: .5em 10%;
+			width: 4.5%;
+		}
+		.rotation {
+			p {
+				padding: 2px 0;
+			}
+			h4 {
+				margin-top: 15px;
+			}
+		}
+		.education {
+			max-width: 200px;
+			float: left;
+		}
+		.experience {
+			max-width: 200px;
+			display: inline-block;
+			float: left;
+		}
+		.learning {
+			max-width: 200px;
+			display: inline-block;
+			float: left;
+		}
+		.skillset {
+			display: block;
+			clear: both;
+			h4 {
+				color: $primary-color;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 700;
+				font-size: 1em;
+				padding: 0px;
+				margin: 40px 2% 0;
+				vertical-align: center;
+				letter-spacing: -1px;
+
+			}
+			p {
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 400;
+				color: $seccondary-color;
+				margin: auto 2%;
+				padding: 10px 0;
+				font-size: $content-size;
+			
+			}
+
+		}
+		.buttons {
+			margin: 5% 2%;
+			
+		}
+		.contact-icons {
+			margin: 0 6.5% 0;
+			ul {
+				
+				li {
+					float: left;
+					list-style-type: none;
+					padding: 10px;
+					img {
+						max-width: 30px;
+					}
+				}
+				
+			}
+		}
+		
+	}
 }
 
 
@@ -150,11 +422,669 @@ section{
 
 
 .projects {
-	background: #515151;
+	background: url(../img/bg-yamagata.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	.title {
+	@include top-align();
+
+		h1 {
+				color: $heading-color;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 700;
+				font-size: $heading-size;
+				padding: 0px;
+				margin: 30px 7% 50px;
+				vertical-align: center;
+				letter-spacing: -2px;
+			}
+			.project-copy {
+				margin-bottom: 3%;
+
+				h1 {
+				color: $primary-color;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 700;
+				font-size: $heading-size;
+				padding: 0px;
+				margin: auto 7%;
+				vertical-align: center;
+				letter-spacing: -2px;
+				}
+				h2  {
+					color: $primary-color;
+					font-family: 'Montserrat', sans-serif;
+					font-weight: 700;
+					font-size: $subheading-size;
+					padding: 0px;
+					margin: auto 7%;
+					vertical-align: center;
+					letter-spacing: -2px;
+				}
+				h3 {
+					font-family: 'Open Sans', sans-serif;
+					font-weight: 300;
+					font-style: italic;
+					font-size: $subheading-size;
+					color: $seccondary-color;
+					margin: auto 7%;
+					padding: 20px 0 70px;
+				}
+				p {
+					font-family: 'Open Sans', sans-serif;
+					font-weight: 400;
+					color: $seccondary-color;
+					margin: auto 7%;
+					width: $content-width;
+					padding: 10px 0;
+					font-size: $content-size;
+				}
+				a {
+					text-decoration:none;
+					padding: 15px 20px;
+					font-family: 'Montserrat', sans-serif;
+					font-size: 1em;
+					color: $flower-red;
+					margin: auto 6%;
+
+				}
+
+				.project-date {
+					p {
+						font-family: 'Open Sans', sans-serif;
+						font-weight: 300;
+						color: $seccondary-color;
+						margin: auto 7%;
+						width: $content-width;
+						padding: 10px 0;
+						font-size: 0.5em;
+						
+
+					span p {
+						color: $flower-red;
+						}	
+					}
+					
+				}
+			}
+		}
+	  
+		.buttons {
+			margin: 2% 15% 0px;
+			
+		}
+		.icon {
+			font-size: 0.5em;
+			padding: 8px;
+		}
+		
+		.bold-red {
+			color: $primary-color;
+			font-weight: 700;
+		}
+	}
+
+
+
+//
+// Fourth section
+//---------------------------------------------------
+
+
+.contact {
+	background: url(../img/bg-ski.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	.title {
+	@include top-align();
+	float: right;
+	max-width: 550px;
+	margin-right: 5%;
+	  h1 {
+			color: $heading-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: $heading-size;
+			padding: 0px;
+			margin: auto 10%;
+			vertical-align: center;
+			letter-spacing: -2px;
+		}
+		h3 {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-style: italic;
+			font-size: 1em;
+			color: $heading-color;
+			margin: auto 10%;
+			padding: 0 0 30px;
+		}
+		h4 {
+			color: $primary-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1em;
+			padding: 0px;
+			margin: 40px 10% 0;
+			vertical-align: center;
+			letter-spacing: -1px;
+		}
+		h5 {
+			color: $flower-red;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1.4em;
+			padding: 0px;
+			margin: 40px 10% 0;
+			vertical-align: center;
+			letter-spacing: -1px;
+		}
+		p {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			color: $seccondary-color;
+			margin: auto 10%;
+			padding: 10px 0;
+			font-size: $content-size;
+			
+		}
+		.rotation {
+			p {
+				padding: 2px 0;
+			}
+			h4 {
+				margin-top: 15px;
+			}
+		}
+		.buttons {
+			margin: 5% 10%;
+			
+		}
+		.contact-icons {
+			margin: 0 6.5% 0;
+			ul {
+				
+				li {
+					float: left;
+					list-style-type: none;
+					padding: 10px;
+					img {
+						max-width: 30px;
+					}
+				}
+				
+			}
+		}
+		
+	}
 }
 
+//
+// Page The Nostalgia Machine
+//---------------------------------------------------
+
+.tnm-header {
+	background: url(../img/bg-tnm.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+	.title {
+	@include middle-top-align();
+
+	  h1 {
+			color: #fff;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: $jumbo-heading;
+			padding: 0px;
+			margin: auto 7%;
+			vertical-align: center;
+			letter-spacing: -2px;
+		}
+		p {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-style: italic;
+			color: #fff;
+			margin: auto 7%;
+			width: $content-width;
+			padding: 10px 0;
+			font-size: 1em;
+		}
+	}
+}
+
+.tnm-about {
+	background-color: #f5f6f8; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	.title {
+	@include projects-align();
+	max-width: 80%;
+	
+	
+	  	h1 {
+			color: $heading-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: $heading-size;
+			// padding: 0 0 30px;
+			margin: auto 10%;
+			vertical-align: center;
+			letter-spacing: -2px;
+		}
+		h3 {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 300;
+			font-style: italic;
+			font-size: $subheading-size;
+			color: $seccondary-color;
+			margin: auto 10%;
+			padding: 20px 0 70px;
+		}
+		h5 {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			color: $seccondary-color;
+			margin: auto 10%;
+			width: $content-width;
+			padding: 10px 0;
+			font-size: $content-size;
+			
+			
+		}
+		p {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			color: $seccondary-color;
+			margin: auto 10%;
+			width: $content-width;
+			padding: 10px 0;
+			font-size: $content-size;
+			
+		}
+		i {
+			padding: 5px;
+			color: #656565;
+		}
+		a {
+			text-decoration: none;
+			color: #656565;
+		}
+		.heading-room {
+			padding-bottom: 30px;
+		}
+
+		.buttons {
+			margin: 5% 10%;
+			
+		}
+		.contact-icons {
+			margin: 60px 12.5% 0;
+			ul {
+				
+				li {
+					float: left;
+					list-style-type: none;
+					padding: 10px;
+					img {
+						max-width: 30px;
+					}
+				}
+				
+			}
+		}
+		.tnm-screen {
+			@include projects-screen();
+			display: block;
+			max-width: 40%;
+			float: right;
+			img {
+				max-width: 1000px;
+			}
+			
+		}
+		.underlined_text {
+		      border-bottom: solid 1px #656565;
+		      display: inline;
+		      padding-bottom: 3px;
+		}
+	}
+
+}
+
+	.back {
+
+		h1 {
+			color: $heading-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1.5em;
+			// padding: 0 0 30px;
+			// margin: 0;
+			max-width: 300px;
+			vertical-align: center;
+			letter-spacing: -2px;
+			}
+		}
 
 
+
+//
+// Page: Scorehorse
+//---------------------------------------------------
+
+.sc-header {
+	background: url(../img/bg-sc.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+	.title {
+	@include middle-top-align();
+
+	  h1 {
+			color: #fff;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: $jumbo-heading;
+			padding: 0px;
+			margin: auto 7%;
+			vertical-align: center;
+			letter-spacing: -2px;
+		}
+		p {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-style: italic;
+			color: #fff;
+			margin: auto 7%;
+			width: $content-width;
+			padding: 10px 0;
+			font-size: 1em;
+		}
+	}
+}
+
+.sc-about {
+	background-color: #f5f6f8; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	.title {
+	@include projects-align();
+	max-width: 80%;
+	
+	
+	  	h1 {
+			color: $heading-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: $heading-size;
+			// padding: 0 0 30px;
+			margin: auto 10%;
+			vertical-align: center;
+			letter-spacing: -2px;
+		}
+		h3 {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 300;
+			font-style: italic;
+			font-size: $subheading-size;
+			color: $seccondary-color;
+			margin: auto 10%;
+			padding: 20px 0 70px;
+		}
+		h5 {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			color: $seccondary-color;
+			margin: auto 10%;
+			width: $content-width;
+			padding: 10px 0;
+			font-size: $content-size;
+			
+			
+		}
+		p {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			color: $seccondary-color;
+			margin: auto 10%;
+			width: $content-width;
+			padding: 10px 0;
+			font-size: $content-size;
+			
+		}
+		i {
+			padding: 5px;
+			color: #656565;
+		}
+		a {
+			text-decoration: none;
+			color: #656565;
+		}
+		.heading-room {
+			padding-bottom: 30px;
+		}
+
+		.buttons {
+			margin: 5% 10%;
+			
+		}
+		.contact-icons {
+			margin: 60px 12.5% 0;
+			ul {
+				
+				li {
+					float: left;
+					list-style-type: none;
+					padding: 10px;
+					img {
+						max-width: 30px;
+					}
+				}
+				
+			}
+		}
+		.tnm-screen {
+			@include projects-screen();
+			display: block;
+			max-width: 40%;
+			float: right;
+			img {
+				max-width: 1000px;
+			}
+			
+		}
+		.underlined_text {
+		      border-bottom: solid 1px #656565;
+		      display: inline;
+		      padding-bottom: 3px;
+		}
+	}
+
+}
+
+	.back {
+
+		h1 {
+			color: $heading-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1.5em;
+			// padding: 0 0 30px;
+			// margin: 0;
+			max-width: 300px;
+			vertical-align: center;
+			letter-spacing: -2px;
+			}
+		}
+
+//
+// Page: Vietnam
+//---------------------------------------------------
+
+.vn-header {
+	background: url(../img/bg-vn-test.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+	.title {
+	@include middle-top-align();
+
+	  h1 {
+			color: #fff;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: $jumbo-heading;
+			padding: 0px;
+			margin: auto 7%;
+			vertical-align: center;
+			letter-spacing: -2px;
+		}
+		p {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-style: italic;
+			color: #fff;
+			margin: auto 7%;
+			width: $content-width;
+			padding: 10px 0;
+			font-size: 1em;
+		}
+	}
+}
+
+.vn-about {
+	background-color: #f5f6f8; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	.title {
+	@include projects-align();
+	max-width: 80%;
+	
+	
+	  	h1 {
+			color: $heading-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: $heading-size;
+			// padding: 0 0 30px;
+			margin: auto 10%;
+			vertical-align: center;
+			letter-spacing: -2px;
+		}
+		h3 {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 300;
+			font-style: italic;
+			font-size: $subheading-size;
+			color: $seccondary-color;
+			margin: auto 10%;
+			padding: 20px 0 70px;
+		}
+		h5 {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			color: $seccondary-color;
+			margin: auto 10%;
+			width: $content-width;
+			padding: 10px 0;
+			font-size: $content-size;
+			
+			
+		}
+		p {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			color: $seccondary-color;
+			margin: auto 10%;
+			width: $content-width;
+			padding: 10px 0;
+			font-size: $content-size;
+			
+		}
+		i {
+			padding: 5px;
+			color: #656565;
+		}
+		a {
+			text-decoration: none;
+			color: #656565;
+		}
+		.heading-room {
+			padding-bottom: 30px;
+		}
+
+		.buttons {
+			margin: 5% 10%;
+			
+		}
+		.contact-icons {
+			margin: 60px 12.5% 0;
+			ul {
+				
+				li {
+					float: left;
+					list-style-type: none;
+					padding: 10px;
+					img {
+						max-width: 30px;
+					}
+				}
+				
+			}
+		}
+		.vn-screen {
+			@include projects-screen();
+			display: block;
+			max-width: 40%;
+			float: right;
+			img {
+				max-width: 1000px;
+			}
+			
+		}
+		.underlined_text {
+		      border-bottom: solid 1px #656565;
+		      display: inline;
+		      padding-bottom: 3px;
+		}
+	}
+
+}
+
+	.back {
+
+		h1 {
+			color: $heading-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1.5em;
+			// padding: 0 0 30px;
+			// margin: 0;
+			max-width: 300px;
+			vertical-align: center;
+			letter-spacing: -2px;
+			}
+		}
 
 //
 // Other styles
@@ -163,16 +1093,16 @@ section{
 
 .btn {
  text-decoration:none;
- padding: 20px 20px;
+ padding: 15px 32px;
  font-family: 'Montserrat', sans-serif;
  font-size: $btn-size;
  color: #fff;
-
+ border: solid #fc2d41 2px;
 }
 
 .btn-border {
  text-decoration:none;
- padding: 20px 20px;
+ padding: 15px 23px;
  border-width: 2px;
  border-color: $flower-red;
  font-family: 'Montserrat', sans-serif;
@@ -184,8 +1114,22 @@ section{
 
 .btn-red {
    @include button-bg($flower-red);
+   margin-right: 10px;
 }
 
 .btn-red-border {
-   @include button-bg(#fff);
+   @include button-bg-border(#fff);
 }
+
+
+
+
+
+/* Using plain CSS */
+@media (max-width: 768px) {
+  p {
+  	font-size: 8px;
+  }
+  
+}
+

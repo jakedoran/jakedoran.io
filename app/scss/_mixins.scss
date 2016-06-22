@@ -11,13 +11,57 @@
   transform: translateY(-50%);
 }
 
+// middle top
+@mixin middle-top-align($position: relative) {
+  position: $position;
+  top: 35%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 // Top
 @mixin top-align($position: relative) {
+  position: $position;
+  top: 30%;
+  -webkit-transform: translateY(-20%);
+  -ms-transform: translateY(-20%);
+  transform: translateY(-20%);
+}
+
+// Very top
+@mixin verytop-align($position: relative) {
+  position: $position;
+  top: 15%;
+  -webkit-transform: translateY(-20%);
+  -ms-transform: translateY(-20%);
+  transform: translateY(-20%);
+}
+
+// Very top
+@mixin projects-align($position: relative) {
   position: $position;
   top: 20%;
   -webkit-transform: translateY(-20%);
   -ms-transform: translateY(-20%);
   transform: translateY(-20%);
+}
+
+@mixin projects-screen($position: relative) {
+  position: $position;
+  top: 20%;
+  -webkit-transform: translateY(-80%);
+  -ms-transform: translateY(-80%);
+  transform: translateY(-80%);
+}
+
+// align bottom
+@mixin align-bottom($position: relative) {
+  position: $position;
+  bottom: -50%;
+  -webkit-transform: translateY(-80%);
+  -ms-transform: translateY(-80%);
+  transform: translateY(-80%);
 }
 
 
@@ -28,15 +72,26 @@
 // btn
 @mixin button-bg($bg) {
   background: $bg;
-  &:hover {
-    background:darken($bg,8%);
-    transition: all 0.3s ease;
-  }
+  // &:hover {
+  //   background:darken($bg,8%);
+  //   transition: all 0.3s ease;
+  // }
   &:active {
     background:darken($bg,25%);
   } 
 }
 
+@mixin button-bg-border($bgb) {
+  border: solid #fc2d41 2px;
+  &:hover {
+    background-color: #fc2d41;
+    transition: all 0.3s ease;
+    color: #fff;
+  }
+  &:active {
+    background-color: #fc2d41;
+  } 
+}
 
 
 
@@ -44,3 +99,4 @@
 //
 // Responsive
 //---------------------------------------------------
+
