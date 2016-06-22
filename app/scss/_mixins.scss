@@ -55,6 +55,15 @@
   transform: translateY(-80%);
 }
 
+// align bottom
+@mixin align-bottom($position: relative) {
+  position: $position;
+  bottom: -50%;
+  -webkit-transform: translateY(-80%);
+  -ms-transform: translateY(-80%);
+  transform: translateY(-80%);
+}
+
 
 //
 // Styles
@@ -83,7 +92,6 @@
     background-color: #fc2d41;
   } 
 }
-
 
 
 
