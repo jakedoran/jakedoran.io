@@ -12,6 +12,11 @@
 //variables
 @import 'variables';
 
+//grid
+@import 'gridlex-vars.scss';
+@import 'gridlex.scss';
+
+//icons
 @font-face {
     font-family: 'folio-icons';
     src:    url('../fonts/folio-icons.eot?h8j23h');
@@ -53,9 +58,6 @@
 .icon-genderless:before {
     content: "\f22d";
 }
-
-
-
 
 
 
@@ -142,32 +144,59 @@ body:after{
 	-o-background-size: cover;
 	background-size: cover;
 
-	.title {
-	@include vertical-align();
+	.home-title {
 
-	  h1 {
-			color: #000;
+	 	h1 {
+			color: #333;
 			font-family: 'Montserrat', sans-serif;
 			font-weight: 700;
-			font-size: 3em;
+			font-size: 5em;
 			padding: 0px;
 			margin: auto 15%;
 			vertical-align: center;
-			text-align: right;
+			text-align: center;
 			letter-spacing: -2px;
 		}
-		h3 {
-			font-family: 'Open Sans', sans-serif;
-			font-weight: 300;
-			font-style: italic;
-			font-size: 1.3em;
-			color: #fff;
+		h2 {
+			color: #333;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 4em;
+			padding: 0px;
 			margin: auto 15%;
-			padding-top: 1%;
-			text-align: right;
+			vertical-align: center;
+			text-align: center;
+			letter-spacing: -2px;
+		}
+		hr {
+			max-width: 75%;
+			height: 3px;
+			color: #333;
+			background-color: #333;
 		}
 
 	}
+
+	.block {
+	  text-align: center;
+	  margin: 20px;
+	}
+	 
+	.block:before {
+	  content: '\200B';
+	/*   content: '';
+	  margin-left: -0.25em; */
+	  display: inline-block;
+	  height: 100%; 
+	  vertical-align: middle;
+	 }
+	 
+	.centered {
+	  display: inline-block;
+	  vertical-align: middle;
+	  padding: 10px 15px;
+	  
+	 }
 
 }
 
@@ -185,8 +214,9 @@ body:after{
 	background-size: cover;
 
 	.title {
-	@include top-align();
-	max-width: 80%;
+		max-width: 1500px;
+		padding-top: 10%;
+		display: block;
 	  h1 {
 			color: $heading-color;
 			font-family: 'Montserrat', sans-serif;
@@ -284,10 +314,11 @@ body:after{
 	background-size: cover;
 
 	.title {
-	@include top-align();
 	float: right;
-	max-width: 650px;
-	margin-right: 8%;
+	padding: 10%;
+	display: block;
+	// max-width: 650px;
+	// margin-right: 8%;
 	  h1 {
 			color: $heading-color;
 			font-family: 'Montserrat', sans-serif;
@@ -429,8 +460,7 @@ body:after{
 	background-size: cover;
 
 	.title {
-	@include top-align();
-
+		padding-top: 5%;
 		h1 {
 				color: $heading-color;
 				font-family: 'Montserrat', sans-serif;
@@ -542,10 +572,11 @@ body:after{
 	background-size: cover;
 
 	.title {
-	@include top-align();
 	float: right;
-	max-width: 550px;
 	margin-right: 5%;
+	padding: 20% 0 0 0;
+	max-width: 550px;
+	padding-top: 10%;
 	  h1 {
 			color: $heading-color;
 			font-family: 'Montserrat', sans-serif;
@@ -637,7 +668,7 @@ body:after{
 	background-size: cover;
 	
 	.title {
-	@include middle-top-align();
+	
 
 	  h1 {
 			color: #fff;
@@ -669,7 +700,7 @@ body:after{
 	-o-background-size: cover;
 	background-size: cover;
 	.title {
-	@include projects-align();
+	// @include projects-align();
 	max-width: 80%;
 	
 	
@@ -745,7 +776,7 @@ body:after{
 			}
 		}
 		.tnm-screen {
-			@include projects-screen();
+			// @include projects-screen();
 			display: block;
 			max-width: 40%;
 			float: right;
@@ -792,7 +823,7 @@ body:after{
 	background-size: cover;
 	
 	.title {
-	@include middle-top-align();
+	// @include middle-top-align();
 
 	  h1 {
 			color: #fff;
@@ -824,7 +855,7 @@ body:after{
 	-o-background-size: cover;
 	background-size: cover;
 	.title {
-	@include projects-align();
+	// @include projects-align();
 	max-width: 80%;
 	
 	
@@ -900,7 +931,7 @@ body:after{
 			}
 		}
 		.tnm-screen {
-			@include projects-screen();
+			// @include projects-screen();
 			display: block;
 			max-width: 40%;
 			float: right;
@@ -945,7 +976,7 @@ body:after{
 	background-size: cover;
 	
 	.title {
-	@include middle-top-align();
+	// @include middle-top-align();
 
 	  h1 {
 			color: #fff;
@@ -977,7 +1008,7 @@ body:after{
 	-o-background-size: cover;
 	background-size: cover;
 	.title {
-	@include projects-align();
+	// @include projects-align();
 	max-width: 80%;
 	
 	
@@ -1053,7 +1084,7 @@ body:after{
 			}
 		}
 		.vn-screen {
-			@include projects-screen();
+			// @include projects-screen();
 			display: block;
 			max-width: 40%;
 			float: right;
@@ -1125,11 +1156,138 @@ body:after{
 
 
 
-/* Using plain CSS */
-@media (max-width: 768px) {
-  p {
-  	font-size: 8px;
-  }
-  
-}
 
+// @media (max-width: 980px) {
+
+  
+// } // media query end
+
+@media (max-width: 650px) {
+
+	.intro { // intro start 
+
+	  .title {
+	  	text-align: center;
+	  	p {
+			width: 80%;
+			font-size: 13px;
+		}
+		h1 {
+			font-size: 2em;
+		}
+		h3 {
+			font-size: 0.9em;
+		}
+		h4 {
+			font-size: 0.9em;
+		}
+		h5 {
+			font-size: 1.2em;
+		}	
+	  }
+  	} // intro end
+
+
+  	.skills { // skills start 
+
+	  .title {
+	  	float: left;
+	  	text-align: center;
+	  	p {
+			width: 80%;
+			font-size: 13px;
+		}
+		h1 {
+			font-size: 2em;
+		}
+		h3 {
+			font-size: 0.9em;
+		}
+		h4 {
+			font-size: 0.9em;
+		}
+		h5 {
+			font-size: 1.2em;
+		}
+		.skillset {
+			h4 {
+				font-size: 0.9em;
+				padding-top: 20px;
+			}
+			p {
+				font-size: 13px;
+				width: 95%;
+			}
+		}	
+	  }
+  	} // skills end
+
+
+
+  	.projects { // projects start 
+
+	  .title {
+	  	text-align: center;
+	  	p {
+			width: 80%;
+			font-size: 13px;
+		}
+		h1 {
+			font-size: 2em;
+		}
+		.project-copy {
+				margin-bottom: 3%;
+
+				h1 {
+				font-size: 2em;
+				}
+				h2  {
+					font-size: $subheading-size;
+				}
+				h3 {
+					font-size: $subheading-size;
+				}
+				p {
+					width: 85%;
+					font-size: 13px;
+				}
+				a {
+					font-size: 1em;	
+				}
+
+				.project-date {
+					p {
+						width: 85%;
+						font-size: 0.5em;	
+					}
+					
+				}
+			}
+	  }
+  	} // projects end
+
+
+  	.contact { // intro start 
+
+	  .title {
+	  	text-align: center;
+	  	p {
+			width: 80%;
+			font-size: 13px;
+		}
+		h1 {
+			font-size: 2em;
+		}
+		h3 {
+			font-size: 0.9em;
+		}
+		h4 {
+			font-size: 0.9em;
+		}
+		h5 {
+			font-size: 1.2em;
+		}	
+	  }
+  	} // intro end
+
+} // 650px media query end
