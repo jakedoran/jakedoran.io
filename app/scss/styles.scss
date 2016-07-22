@@ -256,6 +256,16 @@ body:after{
 			vertical-align: center;
 			letter-spacing: -1px;
 		}
+		h6 {
+			color: $flower-red;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1.4em;
+			padding: 0px;
+			margin: 40px 10% 0;
+			vertical-align: center;
+			letter-spacing: -1px;
+		}
 		p {
 			font-family: 'Open Sans', sans-serif;
 			font-weight: 400;
@@ -292,6 +302,10 @@ body:after{
 				}
 				
 			}
+		}
+		a {
+			text-decoration: none;
+			color: $seccondary-color;
 		}
 		
 	}

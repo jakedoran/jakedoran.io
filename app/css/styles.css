@@ -958,6 +958,15 @@ body:after {
       margin: 40px 10% 0;
       vertical-align: center;
       letter-spacing: -1px; }
+    .intro .title h6 {
+      color: #fc2d41;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.4em;
+      padding: 0px;
+      margin: 40px 10% 0;
+      vertical-align: center;
+      letter-spacing: -1px; }
     .intro .title p {
       font-family: 'Open Sans', sans-serif;
       font-weight: 400;
@@ -980,6 +989,9 @@ body:after {
         padding: 10px; }
         .intro .title .contact-icons ul li img {
           max-width: 30px; }
+    .intro .title a {
+      text-decoration: none;
+      color: #656565; }
 
 .skills {
   background: url(../img/bg-shrine-test.jpg) no-repeat center center;
