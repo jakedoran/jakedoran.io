@@ -1,0 +1,138 @@
+.skills {
+	background: url(../img/bg-shrine-test.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	.title {
+	float: right;
+	padding: 10%;
+	display: block;
+	// max-width: 650px;
+	// margin-right: 8%;
+	  h1 {
+			color: $heading-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: $heading-size;
+			padding: 0px;
+			margin: auto 2%;
+			vertical-align: center;
+			letter-spacing: -2px;
+		}
+		h3 {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-style: italic;
+			font-size: 1em;
+			color: $heading-color;
+			margin: auto 2%;
+			padding: 0 0 30px;
+		}
+		h4 {
+			color: $primary-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1em;
+			padding: 0px;
+			margin: 40px 10% 0;
+			vertical-align: center;
+			letter-spacing: -1px;
+		}
+		h5 {
+			color: $heading-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1.4em;
+			padding: 0px;
+			margin: 40px 10% 0;
+			vertical-align: center;
+			letter-spacing: -1px;
+		}
+		p {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			color: $seccondary-color;
+			margin: auto 10%;
+			padding: 10px 0;
+			font-size: $content-size;
+			
+		}
+		hr {
+			border-bottom: 2px solid #656565;
+			border-left: none;
+			border-right: none;
+			border-top: none;
+			margin: .5em 10%;
+			width: 4.5%;
+		}
+		.rotation {
+			p {
+				padding: 2px 0;
+			}
+			h4 {
+				margin-top: 15px;
+			}
+		}
+		.education {
+			max-width: 200px;
+			float: left;
+		}
+		.experience {
+			max-width: 200px;
+			display: inline-block;
+			float: left;
+		}
+		.learning {
+			max-width: 200px;
+			display: inline-block;
+			float: left;
+		}
+		.skillset {
+			display: block;
+			clear: both;
+			h4 {
+				color: $primary-color;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 700;
+				font-size: 1em;
+				padding: 0px;
+				margin: 40px 2% 0;
+				vertical-align: center;
+				letter-spacing: -1px;
+
+			}
+			p {
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 400;
+				color: $seccondary-color;
+				margin: auto 2%;
+				padding: 10px 0;
+				font-size: $content-size;
+			
+			}
+
+		}
+		.buttons {
+			margin: 5% 2%;
+			
+		}
+		.contact-icons {
+			margin: 0 6.5% 0;
+			ul {
+				
+				li {
+					float: left;
+					list-style-type: none;
+					padding: 10px;
+					img {
+						max-width: 30px;
+					}
+				}
+				
+			}
+		}
+		
+	}
+}

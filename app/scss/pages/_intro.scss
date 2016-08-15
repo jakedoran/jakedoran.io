@@ -1,0 +1,93 @@
+.intro {
+	background: url(../img/bg-flower-test.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	.title {
+		max-width: 1500px;
+		padding-top: 10%;
+		display: block;
+	  h1 {
+			color: $heading-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: $heading-size;
+			padding: 0px;
+			margin: auto 10%;
+			vertical-align: center;
+			letter-spacing: -2px;
+		}
+		h3 {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-style: italic;
+			font-size: 1em;
+			color: $heading-color;
+			margin: auto 10%;
+			padding: 0 0 30px;
+		}
+		h4 {
+			color: $primary-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1em;
+			padding: 0px;
+			margin: 40px 10% 0;
+			vertical-align: center;
+			letter-spacing: -1px;
+		}
+		h5 {
+			color: $heading-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1.4em;
+			padding: 0px;
+			margin: 40px 10% 0;
+			vertical-align: center;
+			letter-spacing: -1px;
+		}
+		p {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			color: $seccondary-color;
+			margin: auto 10%;
+			width: $content-width;
+			padding: 10px 0;
+			font-size: $content-size;
+			
+		}
+
+		.social {
+			display: block;
+			margin: 40px 0;
+			p {
+				padding: 0px;
+				i {
+					font-size: 2em;
+					color: $seccondary-color;
+					float: left;
+					padding: 0px;
+				}
+			}
+			
+		}
+		
+
+		.rotation {
+			p {
+				padding: 2px 0;
+			}
+			h4 {
+				margin-top: 15px;
+			}
+		}
+		.buttons {
+			margin: 5% 10%;
+			overflow: hidden;
+		}
+		
+	}
+
+}

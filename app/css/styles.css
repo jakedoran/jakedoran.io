@@ -814,59 +814,6 @@
 .icon-genderless:before {
   content: "\f22d"; }
 
-* {
-  box-sizing: border-box; }
-
-html {
-  margin: 0; }
-
-section {
-  height: 100vh;
-  width: 100%; }
-
-footer {
-  height: 6vh;
-  max-width: 100%;
-  background-color: #F5F6F8; }
-  footer h1 {
-    margin: auto;
-    padding-top: 5px; }
-
-/*------------------------------------*    BORDERS
-\*------------------------------------*/
-/* Create a series of empty pseudo-elements... */
-html:before, html:after, body:before, body:after {
-  content: "";
-  background: #fff;
-  position: fixed;
-  display: block;
-  z-index: 5; }
-
-/* ...and position them! */
-html:before {
-  height: 20px;
-  left: 0;
-  right: 0;
-  top: 0; }
-
-html:after {
-  width: 20px;
-  top: 0;
-  right: 0;
-  bottom: 0; }
-
-body:before {
-  height: 20px;
-  right: 0;
-  bottom: 0;
-  left: 0; }
-
-body:after {
-  width: 20px;
-  top: 0;
-  bottom: 0;
-  left: 0; }
-
 .home {
   background: url(../img/bg-home.jpg) no-repeat center center;
   -webkit-background-size: cover;
@@ -966,20 +913,23 @@ body:after {
       width: 37%;
       padding: 10px 0;
       font-size: 0.9em; }
+    .intro .title .social {
+      display: block;
+      margin: 40px 0; }
+      .intro .title .social p {
+        padding: 0px; }
+        .intro .title .social p i {
+          font-size: 2em;
+          color: #656565;
+          float: left;
+          padding: 0px; }
     .intro .title .rotation p {
       padding: 2px 0; }
     .intro .title .rotation h4 {
       margin-top: 15px; }
     .intro .title .buttons {
-      margin: 5% 10%; }
-    .intro .title .contact-icons {
-      margin: 0 6.5% 0; }
-      .intro .title .contact-icons ul li {
-        float: left;
-        list-style-type: none;
-        padding: 10px; }
-        .intro .title .contact-icons ul li img {
-          max-width: 30px; }
+      margin: 5% 10%;
+      overflow: hidden; }
 
 .skills {
   background: url(../img/bg-shrine-test.jpg) no-repeat center center;
@@ -1232,6 +1182,10 @@ body:after {
         padding: 10px; }
         .contact .title .contact-icons ul li img {
           max-width: 30px; }
+    .contact .title p i {
+      font-size: 2em;
+      color: #656565;
+      float: left; }
 
 .tnm-header {
   background: url(../img/bg-tnm.jpg) no-repeat center center;
@@ -1239,24 +1193,29 @@ body:after {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-  .tnm-header .title h1 {
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 3em;
-    padding: 0px;
-    margin: auto 7%;
-    vertical-align: center;
-    letter-spacing: -2px; }
-  .tnm-header .title p {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    color: #fff;
-    margin: auto 7%;
-    width: 37%;
-    padding: 10px 0;
-    font-size: 1em; }
+  .tnm-header .title {
+    margin-left: 5%;
+    padding: 20% 0 0 0;
+    max-width: 800px;
+    padding-top: 15%; }
+    .tnm-header .title h1 {
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 3em;
+      padding: 0px;
+      margin: 0 7%;
+      vertical-align: center;
+      letter-spacing: -2px; }
+    .tnm-header .title p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-style: italic;
+      color: #fff;
+      margin: auto 7%;
+      width: 37%;
+      padding: 10px 0;
+      font-size: 1em; }
 
 .tnm-about {
   background-color: #f5f6f8;
@@ -1265,13 +1224,16 @@ body:after {
   -o-background-size: cover;
   background-size: cover; }
   .tnm-about .title {
-    max-width: 80%; }
+    max-width: 80%;
+    margin-left: 5%;
+    padding: 20% 0 0 0;
+    padding-top: 10%; }
     .tnm-about .title h1 {
       color: #333;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 2.5em;
-      margin: auto 10%;
+      margin: auto 3%;
       vertical-align: center;
       letter-spacing: -2px; }
     .tnm-about .title h3 {
@@ -1280,13 +1242,13 @@ body:after {
       font-style: italic;
       font-size: 1.2em;
       color: #656565;
-      margin: auto 10%;
+      margin: auto 3%;
       padding: 20px 0 70px; }
     .tnm-about .title h5 {
       font-family: 'Open Sans', sans-serif;
       font-weight: 400;
       color: #656565;
-      margin: auto 10%;
+      margin: auto 3%;
       width: 37%;
       padding: 10px 0;
       font-size: 0.9em; }
@@ -1294,7 +1256,7 @@ body:after {
       font-family: 'Open Sans', sans-serif;
       font-weight: 400;
       color: #656565;
-      margin: auto 10%;
+      margin: auto 3%;
       width: 37%;
       padding: 10px 0;
       font-size: 0.9em; }
@@ -1304,10 +1266,14 @@ body:after {
     .tnm-about .title a {
       text-decoration: none;
       color: #656565; }
+    .tnm-about .title a:hover {
+      border-bottom: solid 1px #656565;
+      display: inline;
+      padding-bottom: 3px; }
     .tnm-about .title .heading-room {
       padding-bottom: 30px; }
     .tnm-about .title .buttons {
-      margin: 5% 10%; }
+      margin: 5% 3%; }
     .tnm-about .title .contact-icons {
       margin: 60px 12.5% 0; }
       .tnm-about .title .contact-icons ul li {
@@ -1322,10 +1288,6 @@ body:after {
       float: right; }
       .tnm-about .title .tnm-screen img {
         max-width: 1000px; }
-    .tnm-about .title .underlined_text {
-      border-bottom: solid 1px #656565;
-      display: inline;
-      padding-bottom: 3px; }
 
 .back h1 {
   color: #333;
@@ -1342,24 +1304,29 @@ body:after {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-  .sc-header .title h1 {
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 3em;
-    padding: 0px;
-    margin: auto 7%;
-    vertical-align: center;
-    letter-spacing: -2px; }
-  .sc-header .title p {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    color: #fff;
-    margin: auto 7%;
-    width: 37%;
-    padding: 10px 0;
-    font-size: 1em; }
+  .sc-header .title {
+    margin-left: 5%;
+    padding: 20% 0 0 0;
+    max-width: 800px;
+    padding-top: 15%; }
+    .sc-header .title h1 {
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 3em;
+      padding: 0px;
+      margin: auto 7%;
+      vertical-align: center;
+      letter-spacing: -2px; }
+    .sc-header .title p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-style: italic;
+      color: #fff;
+      margin: auto 7%;
+      width: 37%;
+      padding: 10px 0;
+      font-size: 1em; }
 
 .sc-about {
   background-color: #f5f6f8;
@@ -1368,13 +1335,16 @@ body:after {
   -o-background-size: cover;
   background-size: cover; }
   .sc-about .title {
+    margin-left: 5%;
+    padding: 20% 0 0 0;
+    padding-top: 10%;
     max-width: 80%; }
     .sc-about .title h1 {
       color: #333;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 2.5em;
-      margin: auto 10%;
+      margin: auto 3%;
       vertical-align: center;
       letter-spacing: -2px; }
     .sc-about .title h3 {
@@ -1383,13 +1353,13 @@ body:after {
       font-style: italic;
       font-size: 1.2em;
       color: #656565;
-      margin: auto 10%;
+      margin: auto 3%;
       padding: 20px 0 70px; }
     .sc-about .title h5 {
       font-family: 'Open Sans', sans-serif;
       font-weight: 400;
       color: #656565;
-      margin: auto 10%;
+      margin: auto 3%;
       width: 37%;
       padding: 10px 0;
       font-size: 0.9em; }
@@ -1397,7 +1367,7 @@ body:after {
       font-family: 'Open Sans', sans-serif;
       font-weight: 400;
       color: #656565;
-      margin: auto 10%;
+      margin: auto 3%;
       width: 37%;
       padding: 10px 0;
       font-size: 0.9em; }
@@ -1407,10 +1377,14 @@ body:after {
     .sc-about .title a {
       text-decoration: none;
       color: #656565; }
+    .sc-about .title a:hover {
+      border-bottom: solid 1px #656565;
+      display: inline;
+      padding-bottom: 3px; }
     .sc-about .title .heading-room {
       padding-bottom: 30px; }
     .sc-about .title .buttons {
-      margin: 5% 10%; }
+      margin: 5% 3%; }
     .sc-about .title .contact-icons {
       margin: 60px 12.5% 0; }
       .sc-about .title .contact-icons ul li {
@@ -1439,96 +1413,105 @@ body:after {
   vertical-align: center;
   letter-spacing: -2px; }
 
-.vn-header {
-  background: url(../img/bg-vn-test.jpg) no-repeat center center;
+.city-header {
+  background: url(../img/bg-japan.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-  .vn-header .title h1 {
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 3em;
-    padding: 0px;
-    margin: auto 7%;
-    vertical-align: center;
-    letter-spacing: -2px; }
-  .vn-header .title p {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    color: #fff;
-    margin: auto 7%;
-    width: 37%;
-    padding: 10px 0;
-    font-size: 1em; }
+  .city-header .title {
+    margin-left: 5%;
+    padding: 20% 0 0 0;
+    max-width: 800px;
+    padding-top: 15%; }
+    .city-header .title h1 {
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 3em;
+      padding: 0px;
+      margin: auto 7%;
+      vertical-align: center;
+      letter-spacing: -2px; }
+    .city-header .title p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-style: italic;
+      color: #fff;
+      margin: auto 7%;
+      width: 37%;
+      padding: 10px 0;
+      font-size: 1em; }
 
-.vn-about {
+.city-about {
   background-color: #f5f6f8;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-  .vn-about .title {
+  .city-about .title {
+    margin-left: 5%;
+    padding: 20% 0 0 0;
+    max-width: 800px;
+    padding-top: 10%;
     max-width: 80%; }
-    .vn-about .title h1 {
+    .city-about .title h1 {
       color: #333;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 2.5em;
-      margin: auto 10%;
+      margin: auto 3%;
       vertical-align: center;
       letter-spacing: -2px; }
-    .vn-about .title h3 {
+    .city-about .title h3 {
       font-family: 'Open Sans', sans-serif;
       font-weight: 300;
       font-style: italic;
       font-size: 1.2em;
       color: #656565;
-      margin: auto 10%;
+      margin: auto 3%;
       padding: 20px 0 70px; }
-    .vn-about .title h5 {
+    .city-about .title h5 {
       font-family: 'Open Sans', sans-serif;
       font-weight: 400;
       color: #656565;
-      margin: auto 10%;
+      margin: auto 3%;
       width: 37%;
       padding: 10px 0;
       font-size: 0.9em; }
-    .vn-about .title p {
+    .city-about .title p {
       font-family: 'Open Sans', sans-serif;
       font-weight: 400;
       color: #656565;
-      margin: auto 10%;
+      margin: auto 3%;
       width: 37%;
       padding: 10px 0;
       font-size: 0.9em; }
-    .vn-about .title i {
+    .city-about .title i {
       padding: 5px;
       color: #656565; }
-    .vn-about .title a {
+    .city-about .title a {
       text-decoration: none;
       color: #656565; }
-    .vn-about .title .heading-room {
+    .city-about .title .heading-room {
       padding-bottom: 30px; }
-    .vn-about .title .buttons {
-      margin: 5% 10%; }
-    .vn-about .title .contact-icons {
+    .city-about .title .buttons {
+      margin: 5% 3%; }
+    .city-about .title .contact-icons {
       margin: 60px 12.5% 0; }
-      .vn-about .title .contact-icons ul li {
+      .city-about .title .contact-icons ul li {
         float: left;
         list-style-type: none;
         padding: 10px; }
-        .vn-about .title .contact-icons ul li img {
+        .city-about .title .contact-icons ul li img {
           max-width: 30px; }
-    .vn-about .title .vn-screen {
+    .city-about .title .city-screen {
       display: block;
       max-width: 40%;
       float: right; }
-      .vn-about .title .vn-screen img {
+      .city-about .title .city-screen img {
         max-width: 1000px; }
-    .vn-about .title .underlined_text {
+    .city-about .title .underlined_text {
       border-bottom: solid 1px #656565;
       display: inline;
       padding-bottom: 3px; }
@@ -1541,6 +1524,57 @@ body:after {
   max-width: 300px;
   vertical-align: center;
   letter-spacing: -2px; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  margin: 0; }
+
+section {
+  height: 100vh;
+  width: 100%; }
+
+footer {
+  height: 6vh;
+  max-width: 100%;
+  background-color: #F5F6F8; }
+  footer h1 {
+    margin: auto;
+    padding-top: 5px; }
+
+/* Create a series of empty pseudo-elements... */
+html:before, html:after, body:before, body:after {
+  content: "";
+  background: #fff;
+  position: fixed;
+  display: block;
+  z-index: 5; }
+
+/* ...and position them! */
+html:before {
+  height: 20px;
+  left: 0;
+  right: 0;
+  top: 0; }
+
+html:after {
+  width: 20px;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+
+body:before {
+  height: 20px;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+body:after {
+  width: 20px;
+  top: 0;
+  bottom: 0;
+  left: 0; }
 
 .btn {
   text-decoration: none;
