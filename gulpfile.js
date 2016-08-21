@@ -27,12 +27,13 @@ gulp.task('deploy', [], function () {
 // compile sass to css
 gulp.task('sass', function() {
   return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
       stream: true
     }))
 });
+
 
 // gulp watch
 gulp.task('watch', ['browserSync', 'sass'], function (){
@@ -42,9 +43,3 @@ gulp.task('watch', ['browserSync', 'sass'], function (){
   gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
-
-
-// test task
-gulp.task('hello', function() {
-  console.log('Hello Jake');
-});
