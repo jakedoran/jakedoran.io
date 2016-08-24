@@ -938,15 +938,15 @@
   background-size: cover; }
   .skills .title {
     float: right;
-    padding: 10%;
-    display: block; }
+    display: block;
+    margin: 2% 2%;
+    text-align: left; }
     .skills .title h1 {
       color: #333;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 2.5em;
       padding: 0px;
-      margin: auto 2%;
       vertical-align: center;
       letter-spacing: -2px; }
     .skills .title h3 {
@@ -955,7 +955,6 @@
       font-style: italic;
       font-size: 1em;
       color: #333;
-      margin: auto 2%;
       padding: 0 0 30px; }
     .skills .title h4 {
       color: #656565;
@@ -963,7 +962,6 @@
       font-weight: 700;
       font-size: 1em;
       padding: 0px;
-      margin: 40px 10% 0;
       vertical-align: center;
       letter-spacing: -1px; }
     .skills .title h5 {
@@ -972,16 +970,18 @@
       font-weight: 700;
       font-size: 1.4em;
       padding: 0px;
-      margin: 40px 10% 0;
       vertical-align: center;
       letter-spacing: -1px; }
     .skills .title p {
       font-family: 'Open Sans', sans-serif;
       font-weight: 400;
       color: #656565;
-      margin: auto 10%;
       padding: 10px 0;
       font-size: 0.9em; }
+    .skills .title ul {
+      float: left;
+      list-style: none;
+      margin: 0; }
     .skills .title hr {
       border-bottom: 2px solid #656565;
       border-left: none;
@@ -1041,14 +1041,15 @@
   -o-background-size: cover;
   background-size: cover; }
   .projects .title {
-    padding-top: 5%; }
+    display: block;
+    float: left;
+    margin: 0% 8%; }
     .projects .title h1 {
       color: #333;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 2.5em;
       padding: 0px;
-      margin: 30px 7% 50px;
       vertical-align: center;
       letter-spacing: -2px; }
     .projects .title .project-copy {
@@ -1059,7 +1060,7 @@
         font-weight: 700;
         font-size: 2.5em;
         padding: 0px;
-        margin: auto 7%;
+        margin: auto 0;
         vertical-align: center;
         letter-spacing: -2px; }
       .projects .title .project-copy h2 {
@@ -1068,7 +1069,7 @@
         font-weight: 700;
         font-size: 1.2em;
         padding: 0px;
-        margin: auto 7%;
+        margin: auto 0;
         vertical-align: center;
         letter-spacing: -2px; }
       .projects .title .project-copy h3 {
@@ -1077,23 +1078,23 @@
         font-style: italic;
         font-size: 1.2em;
         color: #656565;
-        margin: auto 7%;
+        margin: auto 0;
         padding: 20px 0 70px; }
       .projects .title .project-copy p {
         font-family: 'Open Sans', sans-serif;
         font-weight: 400;
         color: #656565;
-        margin: auto 7%;
+        margin: auto 0;
         width: 37%;
         padding: 10px 0;
         font-size: 0.9em; }
       .projects .title .project-copy a {
         text-decoration: none;
-        padding: 15px 20px;
+        padding: 15px 0;
         font-family: 'Montserrat', sans-serif;
         font-size: 1em;
         color: #fc2d41;
-        margin: auto 6%; }
+        margin: auto 0; }
       .projects .title .project-copy .project-date p {
         font-family: 'Open Sans', sans-serif;
         font-weight: 300;
@@ -1120,18 +1121,17 @@
   -o-background-size: cover;
   background-size: cover; }
   .contact .title {
+    max-width: 35%;
     float: right;
-    margin-right: 5%;
-    padding: 20% 0 0 0;
-    max-width: 550px;
-    padding-top: 10%; }
+    display: block;
+    margin: 2% 2%;
+    text-align: left; }
     .contact .title h1 {
       color: #333;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 2.5em;
       padding: 0px;
-      margin: auto 10%;
       vertical-align: center;
       letter-spacing: -2px; }
     .contact .title h3 {
@@ -1140,7 +1140,6 @@
       font-style: italic;
       font-size: 1em;
       color: #333;
-      margin: auto 10%;
       padding: 0 0 30px; }
     .contact .title h4 {
       color: #656565;
@@ -1148,7 +1147,6 @@
       font-weight: 700;
       font-size: 1em;
       padding: 0px;
-      margin: 40px 10% 0;
       vertical-align: center;
       letter-spacing: -1px; }
     .contact .title h5 {
@@ -1157,14 +1155,12 @@
       font-weight: 700;
       font-size: 1.4em;
       padding: 0px;
-      margin: 40px 10% 0;
       vertical-align: center;
       letter-spacing: -1px; }
     .contact .title p {
       font-family: 'Open Sans', sans-serif;
       font-weight: 400;
       color: #656565;
-      margin: auto 10%;
       padding: 10px 0;
       font-size: 0.9em; }
     .contact .title .rotation p {

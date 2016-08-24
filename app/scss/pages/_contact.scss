@@ -6,18 +6,18 @@
 	background-size: cover;
 
 	.title {
-	float: right;
-	margin-right: 5%;
-	padding: 20% 0 0 0;
-	max-width: 550px;
-	padding-top: 10%;
+		max-width: 35%;
+		float: right;
+		display: block;
+		margin: 2% 2%;
+		text-align: left;
 	  h1 {
 			color: $heading-color;
 			font-family: 'Montserrat', sans-serif;
 			font-weight: 700;
 			font-size: $heading-size;
 			padding: 0px;
-			margin: auto 10%;
+			// margin: auto 10%;
 			vertical-align: center;
 			letter-spacing: -2px;
 		}
@@ -27,7 +27,7 @@
 			font-style: italic;
 			font-size: 1em;
 			color: $heading-color;
-			margin: auto 10%;
+			// margin: auto 10%;
 			padding: 0 0 30px;
 		}
 		h4 {
@@ -36,7 +36,7 @@
 			font-weight: 700;
 			font-size: 1em;
 			padding: 0px;
-			margin: 40px 10% 0;
+			// margin: 40px 10% 0;
 			vertical-align: center;
 			letter-spacing: -1px;
 		}
@@ -46,7 +46,7 @@
 			font-weight: 700;
 			font-size: 1.4em;
 			padding: 0px;
-			margin: 40px 10% 0;
+			// margin: 40px 10% 0;
 			vertical-align: center;
 			letter-spacing: -1px;
 		}
@@ -54,7 +54,7 @@
 			font-family: 'Open Sans', sans-serif;
 			font-weight: 400;
 			color: $seccondary-color;
-			margin: auto 10%;
+			// margin: auto 10%;
 			padding: 10px 0;
 			font-size: $content-size;
 			

@@ -6,14 +6,16 @@
 	background-size: cover;
 
 	.title {
-		padding-top: 5%;
+		
+		display: block;
+		float: left;
+		margin: 0% 8%;
 		h1 {
 				color: $heading-color;
 				font-family: 'Montserrat', sans-serif;
 				font-weight: 700;
 				font-size: $heading-size;
 				padding: 0px;
-				margin: 30px 7% 50px;
 				vertical-align: center;
 				letter-spacing: -2px;
 			}
@@ -26,7 +28,7 @@
 				font-weight: 700;
 				font-size: $heading-size;
 				padding: 0px;
-				margin: auto 7%;
+				margin: auto 0;
 				vertical-align: center;
 				letter-spacing: -2px;
 				}
@@ -36,7 +38,7 @@
 					font-weight: 700;
 					font-size: $subheading-size;
 					padding: 0px;
-					margin: auto 7%;
+					margin: auto 0;
 					vertical-align: center;
 					letter-spacing: -2px;
 				}
@@ -46,25 +48,25 @@
 					font-style: italic;
 					font-size: $subheading-size;
 					color: $seccondary-color;
-					margin: auto 7%;
+					margin: auto 0;
 					padding: 20px 0 70px;
 				}
 				p {
 					font-family: 'Open Sans', sans-serif;
 					font-weight: 400;
 					color: $seccondary-color;
-					margin: auto 7%;
+					margin: auto 0;
 					width: $content-width;
 					padding: 10px 0;
 					font-size: $content-size;
 				}
 				a {
 					text-decoration:none;
-					padding: 15px 20px;
+					padding: 15px 0;
 					font-family: 'Montserrat', sans-serif;
 					font-size: 1em;
 					color: $flower-red;
-					margin: auto 6%;
+					margin: auto 0;
 
 				}
 
