@@ -6,7 +6,10 @@
 	background-size: cover;
 
 	.home-title {
-		
+		text-align: center;
+	  	margin: 20px;
+	  	padding-top: 15%;
+	  	
 	 	h1 {
 			color: #333;
 			font-family: 'Montserrat', sans-serif;
@@ -17,8 +20,6 @@
 			vertical-align: center;
 			text-align: center;
 			letter-spacing: -2px;
-
-			
 		}
 		h2 {
 			color: #333;
@@ -40,10 +41,6 @@
 
 	}
 
-	.block {
-	  text-align: center;
-	  margin: 20px;
-	}
 	 
 	.block:before {
 	  content: '\200B';
