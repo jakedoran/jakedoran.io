@@ -6,10 +6,27 @@
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<script src="https://use.fontawesome.com/a72e371c01.js"></script>
+	<script src="js/scrollreveal.js"></script>
 </head>
 	<body>
 	<section class="home">
-		<div class="home-title">
+		<div>
+				<div class="hamburgler-menu">
+				  <ul class="hamburgler-menu-list">
+				   <li><a href="index.html#home"><h1>Home</h1></a></li>
+				   <li><a href="index.html#skills"><h1>Skills</h1></a></li>
+				   <li><a href="index.html#projects"><h1>Projects</h1></a></li>
+				   <li><a href="index.html#contact"><h1>Contact</h1></a></li>
+				   <li><a href="about.html"><h1>About</h1></a></li>
+				  </ul>
+				</div>
+
+				<div id="hamburgler" class="hamburgler-icon-wrapper">
+				  <span class="hamburgler-icon"></span>
+				</div>
+			</div>
+
+		<div class="home-title" data-scrollreveal="enter middle over 1s">
 			<div class="centered">
 				<h1>DIGITAL DESIGN</h1>
 				<hr>
@@ -18,9 +35,10 @@
 		</div>
 	</section>
 
-	<section class="intro"> 
+	<section class="intro" id="home">
 		
-			<div class="title"> 
+		
+			<div class="title" data-scrollreveal="enter top over 1s">
 				<h1>Jake Doran</h1>
 				<h3>Designer, Developer & Entrepreneur</h3>
 
@@ -36,7 +54,6 @@
 						<li><a href="https://www.instagram.com/jakeedoran/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 					</ul>
 				</div>
-
 
 		
 				<div class="buttons">
@@ -58,10 +75,10 @@
 	</section>
 
 	
-	<section id="experience" class="skills"> 
+	<section class="skills" id="skills"> 
 		
 
-		<div class="title">
+		<div class="title" data-scrollreveal="enter top over 1s">
 			<div class="skills-title">
 				<h1>Skills & </h1>
 				<h1>Experience</h1>
@@ -111,8 +128,8 @@
 		
 	</section>
 
-	<section id="work" class="projects">  
-		<div class="title"> 
+	<section class="projects" id="projects">  
+		<div class="title" data-scrollreveal="enter top over 1s"> 
 			<h1>Projects</h1>
 			<div class="project-copy">
 				<p class="project-date">JULY 2014<span class="icon-circle icon"></span><span class="bold-red">WEBSITE</span></p>
@@ -142,9 +159,9 @@
 		</div>
 	</section>
 
-	<section id="a-contact" class="contact"> 
+	<section class="contact" id="contact"> 
 
-		<div class="title"> 
+		<div class="title" data-scrollreveal="enter top over 1s"> 
 			<h1>Contact</h1>
 			<h3>I'd love to hear from you</h3>
 			<p>Get in touch if you'd like to talk about my projects, web design or even just a friendly hello!</p>
@@ -162,6 +179,7 @@
 			
 		</div>
 	</section>
-
+	<script src="js/burger.js"></script>
+	<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
 	</body>
 </html>
