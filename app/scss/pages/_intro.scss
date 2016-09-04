@@ -6,11 +6,11 @@
 	background-size: cover;
 
 	.title {
-		width: 80%;
+		max-width: 40%;
 		display: block;
 		float: left;
 		margin: 8% 8%;
-	  h1 {
+	  	h1 {
 			color: $heading-color;
 			font-family: 'Montserrat', sans-serif;
 			font-weight: 700;
@@ -24,8 +24,9 @@
 			font-weight: 400;
 			font-style: italic;
 			font-size: 1em;
+			padding: 0;
+			margin: 0;
 			color: $heading-color;
-			padding: 0 0 30px;
 		}
 		h4 {
 			color: $primary-color;
@@ -42,6 +43,7 @@
 			font-weight: 700;
 			font-size: 1.4em;
 			padding: 0px;
+			margin: 0;
 			vertical-align: center;
 			letter-spacing: -1px;
 		}
@@ -49,20 +51,24 @@
 			font-family: 'Open Sans', sans-serif;
 			font-weight: 400;
 			color: $seccondary-color;
-			width: $content-width;
+			// width: $content-width;
 			padding: 10px 0;
 			font-size: $content-size;
+			a {
+				color: $seccondary-color;
+			}
 			
 		}
 
+
 		.social {
-			display: block;
+			display: inline-block;
 			ul {
 				list-style: none;
-				display: block;
 				padding: 0;
 				li {
-					padding: 0;
+					padding: 0 5px;
+					float: right;
 				}
 				i {
 					font-size: 2em;
@@ -70,22 +76,27 @@
 					float: left;
 					padding: 0px;
 				}
+				i:hover {
+					color: $flower-red;
+				}
 			}
 			
 		}
 		
 
 		.rotation {
+			margin-top: 50px;
 			p {
 				padding: 2px 0;
+				margin: 0;
 			}
 			h4 {
 				margin-top: 15px;
 			}
 		}
 		.buttons {
-			display: block;
-			padding: 15px 23px;
+			// display: block;
+			margin: 50px 0;
 		}
 		
 	}

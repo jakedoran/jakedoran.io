@@ -6,18 +6,26 @@
 	background-size: cover;
 
 	.title {
-	float: right;
-	padding: 10%;
-	display: block;
-	// max-width: 650px;
-	// margin-right: 8%;
-	  h1 {
+		float: right;
+		display: block;
+		margin: 2% 2%;
+		padding-right: 20px;
+		text-align: left;
+		.skills-title {
+			h1 {
+				padding: 0;
+				margin: 0;
+			}
+		}
+		.skills-list {
+			padding-top: 30px;
+		}
+	  	h1 {
 			color: $heading-color;
 			font-family: 'Montserrat', sans-serif;
 			font-weight: 700;
 			font-size: $heading-size;
 			padding: 0px;
-			margin: auto 2%;
 			vertical-align: center;
 			letter-spacing: -2px;
 		}
@@ -27,8 +35,8 @@
 			font-style: italic;
 			font-size: 1em;
 			color: $heading-color;
-			margin: auto 2%;
-			padding: 0 0 30px;
+			margin: 0;
+			padding: 0;
 		}
 		h4 {
 			color: $primary-color;
@@ -36,7 +44,7 @@
 			font-weight: 700;
 			font-size: 1em;
 			padding: 0px;
-			margin: 40px 10% 0;
+			// margin: 40px 10% 0;
 			vertical-align: center;
 			letter-spacing: -1px;
 		}
@@ -46,7 +54,7 @@
 			font-weight: 700;
 			font-size: 1.4em;
 			padding: 0px;
-			margin: 40px 10% 0;
+			// margin: 40px 10% 0;
 			vertical-align: center;
 			letter-spacing: -1px;
 		}
@@ -54,18 +62,35 @@
 			font-family: 'Open Sans', sans-serif;
 			font-weight: 400;
 			color: $seccondary-color;
-			margin: auto 10%;
+			// margin: auto 10%;
 			padding: 10px 0;
 			font-size: $content-size;
 			
+		}
+		ul {
+			float: left;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li {
+				padding-right: 20px;
+				h4 {
+					padding: 10px 0;
+					margin: 0;
+				}
+				p {
+					padding: 0;
+					margin: 0;
+				}
+			}
 		}
 		hr {
 			border-bottom: 2px solid #656565;
 			border-left: none;
 			border-right: none;
 			border-top: none;
-			margin: .5em 10%;
-			width: 4.5%;
+			margin: .5em 1%;
+			width: 10px;
 		}
 		.rotation {
 			p {
@@ -92,13 +117,14 @@
 		.skillset {
 			display: block;
 			clear: both;
+			padding-top: 20px;
 			h4 {
 				color: $primary-color;
 				font-family: 'Montserrat', sans-serif;
 				font-weight: 700;
 				font-size: 1em;
-				padding: 0px;
-				margin: 40px 2% 0;
+				padding: 0;
+				margin: 0;
 				vertical-align: center;
 				letter-spacing: -1px;
 
@@ -107,15 +133,16 @@
 				font-family: 'Open Sans', sans-serif;
 				font-weight: 400;
 				color: $seccondary-color;
-				margin: auto 2%;
-				padding: 10px 0;
+				margin: auto 0;
+				padding: 8px 0;
+				// padding: 10px 0;
 				font-size: $content-size;
 			
 			}
 
 		}
 		.buttons {
-			margin: 5% 2%;
+			margin: 40px 0;
 			
 		}
 		.contact-icons {
