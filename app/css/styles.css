@@ -908,7 +908,8 @@ li {
   .home .home-title {
     text-align: center;
     margin: 20px;
-    padding-top: 15%; }
+    padding-top: 15%;
+    display: block; }
     .home .home-title h1 {
       color: #333;
       font-family: 'Montserrat', sans-serif;
@@ -1770,19 +1771,17 @@ body:after {
     background-color: #fc2d41; }
 
 @media (max-width: 650px) {
-  .intro .title {
-    text-align: center; }
-    .intro .title p {
-      width: 80%;
-      font-size: 13px; }
-    .intro .title h1 {
-      font-size: 2em; }
-    .intro .title h3 {
-      font-size: 0.9em; }
-    .intro .title h4 {
-      font-size: 0.9em; }
-    .intro .title h5 {
-      font-size: 1.2em; }
+  .intro .title p {
+    width: 80%;
+    font-size: 13px; }
+  .intro .title h1 {
+    font-size: 2em; }
+  .intro .title h3 {
+    font-size: 0.9em; }
+  .intro .title h4 {
+    font-size: 0.9em; }
+  .intro .title h5 {
+    font-size: 1.2em; }
   .skills .title {
     float: left;
     text-align: center; }

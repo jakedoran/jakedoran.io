@@ -144,14 +144,16 @@ body:after{
    @include button-bg-border(#fff);
 }
 
-
+//
+// Responsive Code
+//---------------------------------------------------
 
 @media (max-width: 650px) {
 
 	.intro { // intro start 
 
 	  .title {
-	  	text-align: center;
+	  	
 	  	p {
 			width: 80%;
 			font-size: 13px;
