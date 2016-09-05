@@ -148,6 +148,18 @@ body:after{
 // Responsive Code
 //---------------------------------------------------
 
+@media (max-width: 1400px) {
+	section{
+		height: auto; 
+		overflow: hidden;
+	}
+
+	section.home{
+		height: 100vh; //keep the first header vh
+	}
+}
+
+
 @media (max-width: 650px) {
 
 	.intro { // intro start 

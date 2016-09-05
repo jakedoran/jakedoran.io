@@ -934,7 +934,8 @@ li {
       max-width: 75%;
       height: 3px;
       color: #333;
-      background-color: #333; }
+      background-color: #333;
+      border: none; }
   .home .block:before {
     content: '\200B';
     /*   content: '';
@@ -1769,6 +1770,13 @@ body:after {
     color: #fff; }
   .btn-red-border:active {
     background-color: #fc2d41; }
+
+@media (max-width: 1400px) {
+  section {
+    height: auto;
+    overflow: hidden; }
+  section.home {
+    height: 100vh; } }
 
 @media (max-width: 650px) {
   .intro .title p {
