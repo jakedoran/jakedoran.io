@@ -1778,9 +1778,14 @@ body:after {
   section.home {
     height: 100vh; } }
 
+@media (max-width: 700px) {
+  .title {
+    max-width: 100% !important;
+    margin: 8% !important;
+    float: left !important; } }
+
 @media (max-width: 650px) {
   .intro .title p {
-    width: 80%;
     font-size: 13px; }
   .intro .title h1 {
     font-size: 2em; }
@@ -1791,10 +1796,8 @@ body:after {
   .intro .title h5 {
     font-size: 1.2em; }
   .skills .title {
-    float: left;
-    text-align: center; }
+    float: left; }
     .skills .title p {
-      width: 80%;
       font-size: 13px; }
     .skills .title h1 {
       font-size: 2em; }
@@ -1810,39 +1813,33 @@ body:after {
     .skills .title .skillset p {
       font-size: 13px;
       width: 95%; }
-  .projects .title {
-    text-align: center; }
-    .projects .title p {
-      width: 80%;
-      font-size: 13px; }
-    .projects .title h1 {
+  .projects .title p {
+    font-size: 13px; }
+  .projects .title h1 {
+    font-size: 2em; }
+  .projects .title .project-copy {
+    margin-bottom: 3%; }
+    .projects .title .project-copy h1 {
       font-size: 2em; }
-    .projects .title .project-copy {
-      margin-bottom: 3%; }
-      .projects .title .project-copy h1 {
-        font-size: 2em; }
-      .projects .title .project-copy h2 {
-        font-size: 1.2em; }
-      .projects .title .project-copy h3 {
-        font-size: 1.2em; }
-      .projects .title .project-copy p {
-        width: 85%;
-        font-size: 13px; }
-      .projects .title .project-copy a {
-        font-size: 1em; }
-      .projects .title .project-copy .project-date p {
-        width: 85%;
-        font-size: 0.5em; }
-  .contact .title {
-    text-align: center; }
-    .contact .title p {
-      width: 80%;
+    .projects .title .project-copy h2 {
+      font-size: 1.2em; }
+    .projects .title .project-copy h3 {
+      font-size: 1.2em; }
+    .projects .title .project-copy p {
+      width: 85%;
       font-size: 13px; }
-    .contact .title h1 {
-      font-size: 2em; }
-    .contact .title h3 {
-      font-size: 0.9em; }
-    .contact .title h4 {
-      font-size: 0.9em; }
-    .contact .title h5 {
-      font-size: 1.2em; } }
+    .projects .title .project-copy a {
+      font-size: 1em; }
+    .projects .title .project-copy .project-date p {
+      width: 85%;
+      font-size: 0.5em; }
+  .contact .title p {
+    font-size: 13px; }
+  .contact .title h1 {
+    font-size: 2em; }
+  .contact .title h3 {
+    font-size: 0.9em; }
+  .contact .title h4 {
+    font-size: 0.9em; }
+  .contact .title h5 {
+    font-size: 1.2em; } }
