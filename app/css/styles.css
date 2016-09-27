@@ -1244,6 +1244,7 @@ li {
     display: block;
     margin: 8% 2%;
     padding-right: 20px;
+    padding-bottom: 120px;
     text-align: left; }
     .contact .title h1 {
       color: #333;
@@ -1783,6 +1784,12 @@ body:after {
     max-width: 100% !important;
     margin: 8% !important;
     float: left !important; } }
+
+@media (max-width: 800px) {
+  .title {
+    max-width: 90% !important; }
+    .title p {
+      font-size: 0.8em; } }
 
 @media (max-width: 650px) {
   .intro .title p {

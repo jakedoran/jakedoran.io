@@ -167,6 +167,14 @@ body:after{
 	}
 }
 
+@media (max-width: 800px) {
+	.title {
+		max-width: 90% !important;
+		p {
+			font-size: 0.8em;
+		}
+	}
+}
 
 @media (max-width: 650px) {
 
