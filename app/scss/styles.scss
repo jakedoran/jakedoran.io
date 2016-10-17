@@ -12,31 +12,14 @@
 //variables
 @import 'variables';
 
-//grid
-@import 'grid/gridlex-vars.scss';
-@import 'grid/gridlex.scss';
+//import
+@import '_simple-grid.scss';
 
 //items
 @import '_icons.scss';
 @import '_burger.scss';
 
 //pages
-@import 'pages/_home.scss';
-@import 'pages/_intro.scss';
-@import 'pages/_skills.scss';
-@import 'pages/_projects.scss';
-@import 'pages/_contact.scss';
-@import 'pages/_about.scss';
-
-//project pages
-@import 'pages/projects/_tnm.scss';
-@import 'pages/projects/_scorehorse.scss';
-@import 'pages/projects/_citypop.scss';
-
-
-
-
-
 
 //
 // Main styles
@@ -50,13 +33,10 @@ html {
 	margin: 0;
 }
 
-
-
-section{
+section {
 	height: 100vh;
 	width: 100%;
 	// border: 20px solid white; // putting them on the sections not the html
-
 }
 
 footer {
@@ -108,6 +88,268 @@ body:after{
     left:0;
 }
 
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+	background-color: #fff;
+	margin: 10px 0;
+	display: block;
+	.title {
+		float: left;
+		display: inline-block;
+		padding-left: 30px;
+		p {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			color: $seccondary-color;
+			padding: 10px 0;
+			font-size: $content-size;
+		}
+	}
+	.lang {
+		float: right;
+		display: inline-block;
+		padding-right: 30px;
+		a {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			color: $seccondary-color;
+			padding: 10px 0;
+			font-size: $content-size;
+		}
+	}
+}
+
+.home {
+ 	background: url(../img/bg-home.jpg) center center;
+ 	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	clear: both;
+}
+
+.parallax-window {
+    min-height: 900px;
+    background: transparent;
+}
+
+
+.bio {
+	background: url(../img/bg-flower.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.contact {
+	background: url(../img/bg-yamagata.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.content {
+	max-width: 40%;
+	display: block;
+	float: left;
+	margin: 8% 8%;
+  	h1 {
+		color: $heading-color;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		font-size: $heading-size;
+		padding: 0;
+		margin: 0;
+		letter-spacing: -2px;
+	}
+	h3 {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 400;
+		font-style: italic;
+		font-size: 1em;
+		padding: 0;
+		margin: 0;
+		color: $heading-color;
+	}
+	h4 {
+		color: $primary-color;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		font-size: 1em;
+		padding: 0px;
+		vertical-align: center;
+		letter-spacing: -1px;
+	}
+	h5 {
+		color: $heading-color;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		font-size: 1.4em;
+		padding: 0px;
+		margin: 0;
+		vertical-align: center;
+		letter-spacing: -1px;
+		a {
+			color: $flower-red;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1.2em;
+			padding: 0px;
+			margin: 0;
+			vertical-align: center;
+			letter-spacing: -1px;
+			text-decoration: none;
+		}
+	}
+	p {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 400;
+		color: $seccondary-color;
+		padding: 10px 0;
+		font-size: $content-size;
+		a {
+			color: $seccondary-color;
+		}
+		
+	}
+
+
+	.social {
+		display: inline-block;
+		ul {
+			list-style: none;
+			padding: 0;
+			li {
+				padding: 0 5px;
+				float: right;
+			}
+			i {
+				font-size: 2em;
+				color: $seccondary-color;
+				float: left;
+				padding: 0px;
+			}
+			i:hover {
+				color: $flower-red;
+			}
+		}
+		
+	}
+	.rotation {
+		margin-top: 50px;
+		ul {
+			margin: 30px 0;
+			padding: 0;
+			li {
+				margin: 0;
+				padding: 0;
+				p {
+					padding: 2px 0;
+					margin: 0;
+				}
+				h4 {
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}	
+	}
+	.buttons {
+		// display: block;
+		margin: 50px 0;
+	}
+}	
+
+//
+// Projects 
+//---------------------------------------------------
+
+.projects {
+	width: 80%;
+	margin: 20% auto 10%;
+	.caption {
+		text-align: center;
+		h5 {
+			margin: 0;
+			padding: 0;
+			color: $heading-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1.4em;
+			vertical-align: center;
+			letter-spacing: -1px;
+		}
+		p {
+			margin: 0;
+			padding: 0;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			color: $seccondary-color;
+			font-size: $content-size;
+		}
+	}
+	.lg-box {
+		display: block;
+		margin-bottom: 80px;
+    	img {
+    		display: block;
+	    	margin: 10px auto;
+			height: 370px;
+	    	width: 650px;
+    	}
+	}
+	.md-box {
+		display: inline-block;
+    	img {
+    		display: block;
+	    	margin: 10px auto;
+			height: 360px;
+	    	width: 505px;
+    	}
+	}
+	.md-box-right {
+		float: right;
+		margin-top: 20%;
+    	img {
+    		display: block;
+	    	margin: 10px auto;
+			height: 315px;
+	    	width: 410px;
+    	}
+	}
+	.sm-box {
+		display: inline-block;
+    	img {
+    		display: block;
+	    	margin: 10px auto;
+			height: 240px;
+	    	width: 505px;
+    	}
+	}
+	.sm-box-right {
+		float: right;
+		margin-top: 20%;
+    	img {
+    		display: block;
+	    	margin: 10px auto;
+			height: 500px;
+	    	width: 330px;
+    	}
+	}
+}
 
 //
 // Other styles
@@ -115,12 +357,12 @@ body:after{
 
 
 .btn {
- text-decoration:none;
- padding: 15px 32px;
- font-family: 'Montserrat', sans-serif;
- font-size: $btn-size;
- color: #fff;
- border: solid #fc2d41 2px;
+	text-decoration:none;
+	padding: 15px 32px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: $btn-size;
+	color: #fff;
+	border: solid #fc2d41 2px;
 }
 
 .btn-border {
@@ -144,164 +386,3 @@ body:after{
    @include button-bg-border(#fff);
 }
 
-//
-// Responsive Code
-//---------------------------------------------------
-
-@media (max-width: 1400px) {
-	section{
-		height: auto; 
-		overflow: hidden;
-	}
-
-	section.home{
-		height: 100vh; //keep the first header vh
-	}
-}
-
-@media (max-width: 700px){
-	.title{
-		max-width: 100% !important;
-		margin: 8% !important;
-		float: left !important;
-	}
-}
-
-@media (max-width: 800px) {
-	.title {
-		max-width: 90% !important;
-		p {
-			font-size: 0.8em;
-		}
-	}
-}
-
-@media (max-width: 650px) {
-
-	.intro { // intro start 
-
-	  .title {
-	  	
-	  	p {
-		//	width: 80%;
-			font-size: 13px;
-		}
-		h1 {
-			font-size: 2em;
-		}
-		h3 {
-			font-size: 0.9em;
-		}
-		h4 {
-			font-size: 0.9em;
-		}
-		h5 {
-			font-size: 1.2em;
-		}	
-	  }
-  	} // intro end
-
-
-  	.skills { // skills start 
-
-	  .title {
-	  	float: left;
-	  	// text-align: center;
-	  	p {
-		//	width: 80%;
-			font-size: 13px;
-		}
-		h1 {
-			font-size: 2em;
-		}
-		h3 {
-			font-size: 0.9em;
-		}
-		h4 {
-			font-size: 0.9em;
-		}
-		h5 {
-			font-size: 1.2em;
-		}
-		.skillset {
-			h4 {
-				font-size: 0.9em;
-				padding-top: 20px;
-			}
-			p {
-				font-size: 13px;
-				width: 95%;
-			}
-		}	
-	  }
-  	} // skills end
-
-
-
-  	.projects { // projects start 
-
-	  .title {
-	  	// text-align: center;
-	  	p {
-			//width: 80%;
-			font-size: 13px;
-		}
-		h1 {
-			font-size: 2em;
-		}
-		.project-copy {
-				margin-bottom: 3%;
-
-				h1 {
-				font-size: 2em;
-				}
-				h2  {
-					font-size: $subheading-size;
-				}
-				h3 {
-					font-size: $subheading-size;
-				}
-				p {
-					width: 85%;
-					font-size: 13px;
-				}
-				a {
-					font-size: 1em;	
-				}
-
-				.project-date {
-					p {
-						width: 85%;
-						font-size: 0.5em;	
-					}
-					
-				}
-			}
-	  }
-  	} // projects end
-
-
-  	.contact { // intro start 
-
-	  .title {
-	  	// text-align: center;
-	  	p {
-			//width: 80%;
-			font-size: 13px;
-		}
-		h1 {
-			font-size: 2em;
-		}
-		h3 {
-			font-size: 0.9em;
-		}
-		h4 {
-			font-size: 0.9em;
-		}
-		h5 {
-			font-size: 1.2em;
-		}	
-	  }
-  	} // intro end
-
-} // 650px media query end
