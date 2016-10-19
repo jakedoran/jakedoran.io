@@ -2,30 +2,20 @@
 // Import
 //---------------------------------------------------
 
-//font
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,300,300italic,400italic);
-
 //mixins
 @import 'mixins';
 
 //variables
 @import 'variables';
 
-//import
-@import '_simple-grid.scss';
-
 //items
-@import '_icons.scss';
-@import '_burger.scss';
 
-//pages
 
 //
 // Main styles
 //---------------------------------------------------
 
-*{
+* {
 	box-sizing: border-box; // fuckin love border box
 }
 
@@ -33,356 +23,43 @@ html {
 	margin: 0;
 }
 
-section {
-	height: 100vh;
-	width: 100%;
-	// border: 20px solid white; // putting them on the sections not the html
+.fp-tableCell {
+	vertical-align: top;
 }
 
-footer {
-	height: 6vh;
-	max-width: 100%;
-	background-color: #F5F6F8;
-	h1 {
-		margin: auto;
-		padding-top: 5px;
-	}
-}
-
-//
-// Borders
-//---------------------------------------------------
-
-/* Create a series of empty pseudo-elements... */
-html:before,html:after,body:before,body:after{
-    content:"";
-    background:#fff;
-    position:fixed;
-    display:block;
-    z-index:5;
-}
-
-/* ...and position them! */
-html:before{
-    height:20px;
-    left:0;
-    right:0;
-    top:0;
-}
-html:after{
-    width:20px;
-    top:0;
-    right:0;
-    bottom:0;
-}
-body:before{
-    height:20px;
-    right:0;
-    bottom:0;
-    left:0;
-}
-body:after{
-    width:20px;
-    top:0;
-    bottom:0;
-    left:0;
-}
-
-html{
-    height: 100%;
+.section {
+    height: 100vh;
     width: 100%;
-}
-
-body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.header {
-	background-color: #fff;
-	margin: 10px 0;
-	display: block;
-	.title {
-		float: left;
-		display: inline-block;
-		padding-left: 30px;
-		p {
-			font-family: 'Open Sans', sans-serif;
-			font-weight: 400;
-			color: $seccondary-color;
-			padding: 10px 0;
-			font-size: $content-size;
-		}
-	}
-	.lang {
-		float: right;
-		display: inline-block;
-		padding-right: 30px;
-		a {
-			font-family: 'Open Sans', sans-serif;
-			font-weight: 400;
-			color: $seccondary-color;
-			padding: 10px 0;
-			font-size: $content-size;
-		}
-	}
 }
 
 .home {
- 	background: url(../img/bg-home.jpg) center center;
- 	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	clear: both;
+	background: url(../img/bg-home.jpg) no-repeat center center; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 }
 
-.parallax-window {
-    min-height: 900px;
-    background: transparent;
-}
-
-
-.bio {
+.about {
 	background: url(../img/bg-flower.jpg) no-repeat center center; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 }
 
-.contact {
-	background: url(../img/bg-yamagata.jpg) no-repeat center center; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
 
-.content {
-	max-width: 40%;
-	display: block;
-	float: left;
-	margin: 8% 8%;
-  	h1 {
-		color: $heading-color;
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 700;
-		font-size: $heading-size;
-		padding: 0;
-		margin: 0;
-		letter-spacing: -2px;
-	}
-	h3 {
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 400;
-		font-style: italic;
-		font-size: 1em;
-		padding: 0;
-		margin: 0;
-		color: $heading-color;
-	}
-	h4 {
-		color: $primary-color;
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 700;
-		font-size: 1em;
-		padding: 0px;
-		vertical-align: center;
-		letter-spacing: -1px;
-	}
-	h5 {
-		color: $heading-color;
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 700;
-		font-size: 1.4em;
-		padding: 0px;
-		margin: 0;
-		vertical-align: center;
-		letter-spacing: -1px;
-		a {
-			color: $flower-red;
-			font-family: 'Montserrat', sans-serif;
-			font-weight: 700;
-			font-size: 1.2em;
-			padding: 0px;
-			margin: 0;
-			vertical-align: center;
-			letter-spacing: -1px;
-			text-decoration: none;
+// Nav
+//-------
+
+.nav {
+	vertical-align: top;
+	position: fixed;
+	ul {
+		list-style: none;
+		li {
+			float: left;
+			padding: 20px;
 		}
 	}
-	p {
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 400;
-		color: $seccondary-color;
-		padding: 10px 0;
-		font-size: $content-size;
-		a {
-			color: $seccondary-color;
-		}
-		
-	}
-
-
-	.social {
-		display: inline-block;
-		ul {
-			list-style: none;
-			padding: 0;
-			li {
-				padding: 0 5px;
-				float: right;
-			}
-			i {
-				font-size: 2em;
-				color: $seccondary-color;
-				float: left;
-				padding: 0px;
-			}
-			i:hover {
-				color: $flower-red;
-			}
-		}
-		
-	}
-	.rotation {
-		margin-top: 50px;
-		ul {
-			margin: 30px 0;
-			padding: 0;
-			li {
-				margin: 0;
-				padding: 0;
-				p {
-					padding: 2px 0;
-					margin: 0;
-				}
-				h4 {
-					margin: 0;
-					padding: 0;
-				}
-			}
-		}	
-	}
-	.buttons {
-		// display: block;
-		margin: 50px 0;
-	}
-}	
-
-//
-// Projects 
-//---------------------------------------------------
-
-.projects {
-	width: 80%;
-	margin: 20% auto 10%;
-	.caption {
-		text-align: center;
-		h5 {
-			margin: 0;
-			padding: 0;
-			color: $heading-color;
-			font-family: 'Montserrat', sans-serif;
-			font-weight: 700;
-			font-size: 1.4em;
-			vertical-align: center;
-			letter-spacing: -1px;
-		}
-		p {
-			margin: 0;
-			padding: 0;
-			font-family: 'Open Sans', sans-serif;
-			font-weight: 400;
-			color: $seccondary-color;
-			font-size: $content-size;
-		}
-	}
-	.lg-box {
-		display: block;
-		margin-bottom: 80px;
-    	img {
-    		display: block;
-	    	margin: 10px auto;
-			height: 370px;
-	    	width: 650px;
-    	}
-	}
-	.md-box {
-		display: inline-block;
-    	img {
-    		display: block;
-	    	margin: 10px auto;
-			height: 360px;
-	    	width: 505px;
-    	}
-	}
-	.md-box-right {
-		float: right;
-		margin-top: 20%;
-    	img {
-    		display: block;
-	    	margin: 10px auto;
-			height: 315px;
-	    	width: 410px;
-    	}
-	}
-	.sm-box {
-		display: inline-block;
-    	img {
-    		display: block;
-	    	margin: 10px auto;
-			height: 240px;
-	    	width: 505px;
-    	}
-	}
-	.sm-box-right {
-		float: right;
-		margin-top: 20%;
-    	img {
-    		display: block;
-	    	margin: 10px auto;
-			height: 500px;
-	    	width: 330px;
-    	}
-	}
 }
-
-//
-// Other styles
-//---------------------------------------------------
-
-
-.btn {
-	text-decoration:none;
-	padding: 15px 32px;
-	font-family: 'Montserrat', sans-serif;
-	font-size: $btn-size;
-	color: #fff;
-	border: solid #fc2d41 2px;
-}
-
-.btn-border {
- text-decoration:none;
- padding: 15px 23px;
- border-width: 2px;
- border-color: $flower-red;
- font-family: 'Montserrat', sans-serif;
- font-size: $btn-size;
- color: $primary-color;
-
-
-}
-
-.btn-red {
-   @include button-bg($flower-red);
-   margin-right: 10px;
-}
-
-.btn-red-border {
-   @include button-bg-border(#fff);
-}
-
