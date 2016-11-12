@@ -1,25 +1,31 @@
-//
-// Colors
-//---------------------------------------------------
+// Font
+//----------------
 
-// Font colors
+$font-h1: 'Cantata One', sans-serif;
+$font-h2: 'Cantata One', sans-serif;
+
+$font-nav: 'Noto Sans', sans-serif;
+
+$font-copy: 'Noto Sans', sans-serif;
+
+// Color
+//----------------
+$flower-red: #FC2D41;
 $primary-color: #656565;
 $seccondary-color: #656565;
-$heading-color: #333;
-// red
-$flower-red: #fc2d41;
+$heading-color: #272727;
 
-//
-// Type
-//---------------------------------------------------
+$color-copy: #272727;
 
-$heading-size: 2.5em;
-$jumbo-heading: 3em;
-$subheading-size: 1.2em;
+$color-icon: #767676;
+
+// Size
+//----------------
+
 $content-size: 0.9em;
-$btn-size: 0.8em;
-//
-// Layout
-//---------------------------------------------------
 
-$content-width: 37%;
+$title-size: 3em;
+$copy-size: 0.8em;
+
+$btn-size: 0.8em;
+

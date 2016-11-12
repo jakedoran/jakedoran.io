@@ -6,13 +6,25 @@
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 <link rel="stylesheet" href="css/styles.css">
+<script src="https://use.fontawesome.com/a72e371c01.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="js/vendors/jquery.easings.min.js"></script>
+<script type="text/javascript" src="js/vendors/scrolloverflow.min.js"></script>
 <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                
+    			css3: true,
+    			controlArrows: false,
+    			loopHorizontal: false,
+    			scrollingSpeed: 700,
+        		scrollOverflow: true,
+        		keyboardScrolling: false,
+        		resetSliders: true,
+        		anchors:['slideAbout', 'slideProjects', 'slidePhotography', 'slideContact'],
+        		menu: '#myMenu',
+    			animateAnchor: false,
+
             });
         });
     </script>
@@ -21,23 +33,99 @@
 <body>
     <div id="fullpage">
         <div class="section home">
-        	<h1>Jake</h1>
-        	<h1>Doran</h1>
+        	<div class="align">
+        		<div class="logo">
+    				<h1>Jake<span>Doran</span></h1>
+        		</div>
+        	</div> 	
         </div>
-        <div class="section">
-	        <div class="slide about" data-anchor="slide1">
-	        	<div class="nav">
-	        		<ul>
-	        			<li><a>About</a></li>
-	        			<li><a>Projects</a></li>
-	        			<li><a>Photography</a></li>
-	        			<li><a>Contact</a></li>
-	        		</ul>
+        <div class="section" data-anchor="home0">
+	        <div class="nav">
+	        	<div class="logo">
+	        		<h2>Jake</h2>
+	        		<h2>Doran</h2>
+	        	</div>
+				<ul id="myMenu">
+					<li><a href="#home/slideAbout1">About</a></li>
+					<li><a href="#home/slideProjects2">Projects</a></li>
+					<li><a href="#home/slidePhotography3">Photography</a></li>
+					<li><a href="#home/slideContact4">Contact</a></li>
+				</ul>
+				<div class="lang">
+					<p><a href="index.html">EN </a>/<a href="index-jp.html"> JP</a></p>
+				</div>
+		    </div>
+	        <div class="slide about" data-anchor="slideAbout">
+	        	<div class="content">
+	        		<h1>Jake Doran</h1> <!-- Change this header -->
+	        		<h2>Designer, Developer & Entrepreneur</h2>
+
+	        		<p>I’m a web designer, developer and photographer currently working for Harcourts International, designing web sites and web apps for users across the world.</p>
+	        		<p>Outside of corporate life I split my time between studying Japanese and taking on ambitious projects with my friend Eliot Slevin.</p>
+
+	        		<div class="social">
+						<ul>
+							<li><a href="https://twitter.com/jakeedoran" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+
+							<li><a href="https://www.instagram.com/jakeedoran/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+					<div class="buttons">
+						<a href="#work" class="btn btn-red">VIEW WORK</a>
+						<a href="#a-contact" class="btn-border btn-red-border">GET IN TOUCH</a>
+					</div>
+
 	        	</div>
 	        </div>
-	        <div class="slide" data-anchor="slide2"> Slide 2 </div>
-	        <div class="slide" data-anchor="slide3"> Slide 3 </div>
-	        <div class="slide" data-anchor="slide4"> Slide 4 </div>
+
+	        <div class="slide projects" data-anchor="slideProjects">
+	        	<div class="content">
+
+					<div class="flex-grid-50">
+					 	<div class="col">
+					 		<img src="img/project-tnm.png">
+					 		<img src="img/project-citypop.png">
+					  	</div>
+					  	<div class="col">
+					  		<img src="img/project-sc.png">
+					  		<img src="img/project-kpm.png">
+					  	</div>
+					</div>
+
+				</div>
+	        </div>
+
+	        <div class="slide photography" data-anchor="slidePhotography">
+	        	<div class="content">
+
+					<div class="flex-grid-50">
+					 	<div class="col">
+					 		<img src="img/photography-vietnam.png">
+					  	</div>
+					</div>
+
+				</div>
+	        </div>
+
+	        <div class="slide contact" data-anchor="slideContact">
+	        	<div class="content">
+	        		<h1>Contact</h1>
+	        		<h2>I'd love to hear from you</h2>
+
+	        		<p>Get in touch if you'd like to talk about my projects, web design or even just a friendly hello!</p>
+	        		<p>Please take note that as I'm working full time i wont be able to take on large projects so please get in touch sooner rather than later so i can schedule you in.</p>
+
+	        		<h3>info@jakedoran.io</h3>
+
+	        		<div class="social">
+						<ul>
+							<li><a href="https://twitter.com/jakeedoran" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+
+							<li><a href="https://www.instagram.com/jakeedoran/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+	        	</div>
+	        </div>
     	</div>
     </div>            
 </body>

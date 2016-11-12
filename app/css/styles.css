@@ -1,14 +1,51 @@
+@import url("https://fonts.googleapis.com/css?family=Cantata+One");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i");
+@font-face {
+  font-family: 'folio-icons';
+  src: url("../assets/../scss/fonts/folio-icons.eot?h8j23h");
+  src: url("../assets/../scss/fonts/folio-icons.eot?h8j23h#iefix") format("embedded-opentype"), url("../assets/../scss/fonts/folio-icons.ttf?h8j23h") format("truetype"), url("../assets/../scss/fonts/folio-icons.woff?h8j23h") format("woff"), url("../assets/../scss/fonts/folio-icons.svg?h8j23h#folio-icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'folio-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-twitter:before {
+  content: "\f099"; }
+
+.icon-github:before {
+  content: "\f09b"; }
+
+.icon-linkedin:before {
+  content: "\f0e1"; }
+
+.icon-circle:before {
+  content: "\f111"; }
+
+.icon-genderless:before {
+  content: "\f22d"; }
+
 * {
   box-sizing: border-box; }
 
-html {
+html, body {
   margin: 0; }
 
 .fp-tableCell {
   vertical-align: top; }
 
 .section {
-  height: 100vh;
+  height: auto;
   width: 100%; }
 
 .home {
@@ -18,18 +55,253 @@ html {
   -o-background-size: cover;
   background-size: cover; }
 
+.align {
+  height: 100%; }
+  .align .logo {
+    display: flex;
+    align-items: center;
+    height: 100%; }
+    .align .logo h1 {
+      font-family: "Cantata One", sans-serif;
+      font-size: 4em;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 60px; }
+    .align .logo span {
+      display: block; }
+
 .about {
   background: url(../img/bg-flower.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+  .about .content {
+    max-width: 36%;
+    display: block;
+    float: left;
+    margin: 15% 11%; }
+    .about .content h1 {
+      font-family: "Cantata One", sans-serif;
+      font-size: 3em;
+      padding: 0;
+      margin: 0; }
+    .about .content h2 {
+      font-family: "Noto Sans", sans-serif;
+      font-size: 0.8em;
+      font-style: italic;
+      color: #272727;
+      font-weight: 400;
+      padding: 0 0 15px 0;
+      margin: 0; }
+    .about .content p {
+      font-family: "Noto Sans", sans-serif;
+      font-size: 0.8em;
+      color: #272727; }
+    .about .content .social {
+      display: inline-block;
+      padding-top: 10px; }
+      .about .content .social ul {
+        list-style: none;
+        padding: 0; }
+        .about .content .social ul li {
+          float: right;
+          padding-right: 10px; }
+        .about .content .social ul i {
+          font-size: 2em;
+          color: #767676;
+          float: left;
+          padding-right: 10px; }
+        .about .content .social ul i:hover {
+          color: #FC2D41; }
+    .about .content .buttons {
+      margin-top: 90px; }
+
+.projects .content {
+  width: 80%;
+  margin: 8% auto 0; }
+  .projects .content .flex-grid {
+    display: flex; }
+  .projects .content .flex-grid .col {
+    flex: 1; }
+  .projects .content .flex-grid-50 {
+    display: flex;
+    justify-content: space-between; }
+  .projects .content .flex-grid-50 .col {
+    width: 50%; }
+  @media (max-width: 400px) {
+    .projects .content .flex-grid,
+    .projects .content .flex-grid-50 {
+      display: block; }
+      .projects .content .flex-grid .col,
+      .projects .content .flex-grid-50 .col {
+        width: 100%;
+        margin: 0 0 10px 0; } }
+  .projects .content * {
+    box-sizing: border-box; }
+  .projects .content body {
+    padding: 20px; }
+  .projects .content .flex-grid {
+    margin: 0 0 20px 0; }
+  .projects .content .col {
+    padding: 20px; }
+    .projects .content .col img {
+      width: 100%;
+      display: block; }
+
+.photography .content {
+  width: 80%;
+  margin: 8% auto 0; }
+  .photography .content .flex-grid {
+    display: flex; }
+  .photography .content .flex-grid .col {
+    flex: 1; }
+  .photography .content .flex-grid-50 {
+    display: flex;
+    justify-content: space-between; }
+  .photography .content .flex-grid-50 .col {
+    width: 50%; }
+  @media (max-width: 400px) {
+    .photography .content .flex-grid,
+    .photography .content .flex-grid-50 {
+      display: block; }
+      .photography .content .flex-grid .col,
+      .photography .content .flex-grid-50 .col {
+        width: 100%;
+        margin: 0 0 10px 0; } }
+  .photography .content * {
+    box-sizing: border-box; }
+  .photography .content body {
+    padding: 20px; }
+  .photography .content .flex-grid {
+    margin: 0 0 20px 0; }
+  .photography .content .col {
+    padding: 20px; }
+    .photography .content .col img {
+      width: 100%;
+      display: block; }
+
+.contact {
+  background: url(../img/bg-flower-contact.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .contact .content {
+    max-width: 36%;
+    display: block;
+    float: left;
+    margin: 15% 11%; }
+    .contact .content h1 {
+      font-family: "Cantata One", sans-serif;
+      font-size: 3em;
+      padding: 0;
+      margin: 0; }
+    .contact .content h2 {
+      font-family: "Noto Sans", sans-serif;
+      font-size: 0.8em;
+      font-style: italic;
+      color: #272727;
+      font-weight: 400;
+      padding: 0 0 15px 0;
+      margin: 0; }
+    .contact .content h3 {
+      font-family: "Cantata One", sans-serif;
+      font-size: 1.7em;
+      color: #FC2D41; }
+    .contact .content p {
+      font-family: "Noto Sans", sans-serif;
+      font-size: 0.8em;
+      color: #272727; }
+    .contact .content .social {
+      display: inline-block; }
+      .contact .content .social ul {
+        list-style: none;
+        padding: 0;
+        margin: 0; }
+        .contact .content .social ul li {
+          float: right;
+          padding-right: 10px; }
+        .contact .content .social ul i {
+          font-size: 2em;
+          color: #767676;
+          float: left;
+          padding-right: 10px; }
+        .contact .content .social ul i:hover {
+          color: #FC2D41; }
+
+h4 {
+  font-size: 3em; }
 
 .nav {
   vertical-align: top;
-  position: fixed; }
+  position: fixed;
+  z-index: 999;
+  display: block;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff; }
+  .nav .logo {
+    display: inline-block;
+    padding: 20px 80px 0 20px; }
+    .nav .logo h2 {
+      font-family: "Cantata One", sans-serif;
+      font-size: 1em;
+      text-transform: uppercase;
+      margin: 0; }
   .nav ul {
-    list-style: none; }
+    list-style: none;
+    display: inline-block;
+    padding-left: 80px; }
     .nav ul li {
       float: left;
-      padding: 20px; }
+      padding: 0 50px; }
+      .nav ul li a {
+        font-family: "Noto Sans", sans-serif;
+        font-size: 0.7em;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #272727;
+        text-decoration: none; }
+  .nav .lang {
+    float: right;
+    padding: 0 20px; }
+    .nav .lang p a {
+      font-family: "Cantata One", sans-serif;
+      font-size: 0.8em;
+      color: #272727;
+      text-decoration: none; }
+    .nav .lang p a:active {
+      text-decoration: underline; }
+
+.btn {
+  text-decoration: none;
+  padding: 15px 32px;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.8em;
+  color: #fff;
+  border: solid #fc2d41 2px; }
+
+.btn-border {
+  text-decoration: none;
+  padding: 15px 23px;
+  border-width: 2px;
+  border-color: #FC2D41;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.8em;
+  color: #656565; }
+
+.btn-red {
+  background: #FC2D41;
+  margin-right: 10px; }
+  .btn-red:active {
+    background: #a70212; }
+
+.btn-red-border {
+  border: solid #fc2d41 2px; }
+  .btn-red-border:hover {
+    background-color: #fc2d41;
+    transition: all 0.3s ease;
+    color: #fff; }
+  .btn-red-border:active {
+    background-color: #fc2d41; }
