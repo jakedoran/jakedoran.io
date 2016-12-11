@@ -10,10 +10,15 @@
 
 //items
 @import '_icons.scss';
+// @import '_burger.scss';
 
 //font
 @import url('https://fonts.googleapis.com/css?family=Cantata+One');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i');
+
+//page transitions
+@import '_smoothstate.scss';
+
 
 //
 // Main styles
@@ -25,6 +30,7 @@
 
 html, body {
 	margin: 0;
+
 }
 
 .fp-tableCell {
@@ -32,7 +38,7 @@ html, body {
 }
 
 .section {
-    height: auto;
+    height: 100vh;
     width: 100%;
 }
 // Home
@@ -44,6 +50,24 @@ html, body {
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
+  	.align {
+		height: 100%;
+		.logo {
+			display: flex;
+			align-items: center;
+			height: 100%;
+			h1 {
+				font-family: $font-h1;
+				font-size: 4em;
+				color: #fff;
+				text-transform: uppercase;
+				margin: 60px;
+			}
+			span {
+				display: block;
+			}
+		}
+	}
 }
 
 .align {
@@ -63,6 +87,7 @@ html, body {
 			display: block;
 		}
 	}
+	
 }
 
 
@@ -81,7 +106,9 @@ html, body {
  		max-width: 36%;
 		display: block;
 		float: left;
-		margin: 15% 11%;
+		margin: 13% 11%;
+		padding-top: 2%;
+
 		h1 {
 			font-family: $font-h1;
 			font-size: $title-size;
@@ -129,7 +156,7 @@ html, body {
 		
 		.buttons {
 			// display: block;
-			margin-top: 90px;
+			margin-top: 60px;
 		}
  	}
 }
@@ -174,10 +201,11 @@ html, body {
 		  margin: 0 0 20px 0;
 		}
 		.col {
-		  padding: 20px;
+		  padding-right: 60px;
 		  img {
 		  	width: 100%;
 		  	display: block;
+		  	padding-bottom: 60px;
 		  }
 		}
 	}
@@ -223,7 +251,7 @@ html, body {
 		  margin: 0 0 20px 0;
 		}
 		.col {
-		  padding: 20px;
+		  padding-right: 60px;
 		  img {
 		  	width: 100%;
 		  	display: block;
@@ -305,20 +333,30 @@ h4 {
 .nav {
 	vertical-align: top;
 	position: fixed;
+	top: 0;
+  	left: 0;
 	z-index: 999;
 	display: block;
 	width: 100%;
 	padding: 20px;
 	background-color: #fff;
+
 	.logo {
 		display: inline-block;
 		padding: 20px 80px 0 20px;
+		a {
+			text-decoration: none;
+			color: #000;
+		}
 		h2 {
 			font-family: $font-h2;
 			font-size: 1em;
 			text-transform: uppercase;
 			margin: 0;
 		}
+	}
+	.logo-mobile {
+		display: none;
 	}
 	ul {
 		list-style: none;
@@ -329,7 +367,7 @@ h4 {
 			padding: 0 50px;
 			a {
 				font-family: $font-nav;
-				font-size: 0.7em;
+				font-size: 0.6em;
 				letter-spacing: 3px;
 				text-transform: uppercase;
 				color: $color-copy;
@@ -352,7 +390,80 @@ h4 {
 			}
 		}
 	}
+	i {
+		font-size: 5px;
+		color: $flower-red;
+		vertical-align: middle;
+		padding-right: 13px;
+	}
+	.hamburgler-icon {
+		display: none;
+	}
 }
+
+.nav-projects {
+	vertical-align: top;
+	position: fixed;
+	top: 0;
+  	left: 0;
+	z-index: 999;
+	display: block;
+	width: 100%;
+	padding: 20px;
+
+	.logo {
+		display: inline-block;
+		padding: 20px 80px 0 20px;
+		h2 {
+			font-family: $font-h2;
+			font-size: 1em;
+			text-transform: uppercase;
+			margin: 0;
+			color: #fff;
+		}
+	}
+	
+	ul {
+		list-style: none;
+		display: inline-block;
+		padding-left: 80px;
+		li {
+			float: left;
+			padding: 0 50px;
+			a {
+				font-family: $font-nav;
+				font-size: 0.7em;
+				letter-spacing: 3px;
+				text-transform: uppercase;
+				color: $project-color;
+				text-decoration: none; 
+			}
+		}
+	}
+	.lang {
+		float: right;
+		padding: 0 20px;
+		p {
+			color: $project-color;
+			a {
+				font-family: $font-h1;
+				font-size: 0.8em;
+				color: $project-color;
+				text-decoration: none;
+			}
+			a:active {
+				text-decoration: underline;
+			}
+		}
+	}
+	i {
+		font-size: 5px;
+		color: $flower-red;
+		vertical-align: middle;
+		padding-right: 13px;
+	}
+}
+
 
 // button
 //------------------
@@ -368,7 +479,7 @@ h4 {
 
 .btn-border {
  text-decoration:none;
- padding: 15px 23px;
+ padding: 15px 20px;
  border-width: 2px;
  border-color: $flower-red;
  font-family: $font-copy;
@@ -383,4 +494,167 @@ h4 {
 
 .btn-red-border {
    @include button-bg-border(#fff);
+}
+
+
+// projects
+//------------------
+
+.tnm {
+	background-color: #2B2B2B;
+	nav {
+		background-color: #2B2B2B;
+	}
+}
+
+// Burger
+//------------------
+
+.hamburgler-icon-wrapper {
+  position: fixed;
+  top: 1.2em;
+  right: 1.5em;
+  height: 26px;
+  width: 26px;
+  cursor: pointer }
+
+.hamburgler-icon, .hamburgler-icon:before, .hamburgler-icon:after {
+  content: '';
+  position: absolute;
+  border-radius: 1em;
+  height: 3px;
+  width: 26px;
+  background: #FC2D41;
+  transition: all 0.2s ease }
+.hamburgler-icon        { top: 0.75em  }
+.hamburgler-icon:before { top: -0.55em }
+.hamburgler-icon:after  { top: 0.55em  }
+.hamburgler-active .hamburgler-icon { background: transparent; transform: rotate(-135deg) }
+.hamburgler-active .hamburgler-icon:before, .hamburgler-active .hamburgler-icon:after { top: 0 }
+.hamburgler-active .hamburgler-icon:before { transform: rotate(90deg) }
+.hamburgler-active .hamburgler-icon, .hamburgler-active .hamburgler-icon:before, .hamburgler-active .hamburgler-icon:after {
+  background: white }
+
+.hamburgler-menu {
+  transition: all 0.4s ease; 
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.9);
+  color: white;
+  text-align: center }
+.hamburgler-active .hamburgler-menu {
+  opacity: 1;
+  pointer-events: initial; }
+.hamburgler-menu-list {
+  display: block;
+  transition: all 0.4s ease; 
+  padding: 0;
+  list-style-type: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2) }
+.hamburgler-active .hamburgler-menu-list {
+  transform: translate(-50%, -50%) scale(1) }
+
+
+
+
+//
+// Responsive code
+//---------------------------------------------------
+
+@media (max-width: 320px) {
+	.about {
+		background: none;
+		.content {
+			padding-top: 20%;
+			h1 {
+				font-size: 2em;
+			}
+			h2 {
+				font-size: 0.6em;
+			}
+			p {
+				font-size: 0.6em;
+			}
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.home {
+		.align {
+			.logo {
+				height: 100vh;
+				h1 {
+					font-family: $font-h1;
+					font-size: 2.5em;
+					color: #fff;
+					text-transform: uppercase;
+					margin: 10px;
+				}
+				span {
+					display: block;
+				}
+			}
+		}
+	}
+	.nav {
+		padding: 20px;
+		.logo {
+			display: none;
+		}
+		.logo-mobile {
+			display: inline-block;
+			padding: 0px;
+			h2 {
+				font-family: $font-h2;
+				font-size: 1em;
+				text-transform: uppercase;
+				margin: 0;
+			}
+		}
+		ul {
+			display: none;
+		}
+		.lang {
+			display: none;
+		}
+		i {
+			font-size: 5px;
+			color: $flower-red;
+			vertical-align: middle;
+			padding-right: 13px;
+		}
+		.hamburgler-icon {
+			display: inline-block;
+		}
+		
+	}
+	.about {
+		.content {
+			margin: 12% 6%;
+			max-width: 100%;
+
+			float: none;
+			.buttons {
+				margin-top: 150px;
+			}
+			.btn {
+				padding: 15px 20px;
+
+			}
+
+		}
+	}
+	.section {
+		height: auto;
+	}
+
 }

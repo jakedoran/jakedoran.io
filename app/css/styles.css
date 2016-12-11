@@ -35,6 +35,50 @@
 .icon-genderless:before {
   content: "\f22d"; }
 
+/*
+ * Keyframes
+ */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    transform: none; } }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0); }
+  100% {
+    opacity: 1;
+    transform: none; } }
+
+/*
+ * CSS Page Transitions
+ * Don't forget to add vendor prefixes!
+ */
+.m-scene {
+  /** Reverse "exit" animations */ }
+  .m-scene .scene_element {
+    animation-duration: 0.50s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both; }
+  .m-scene .scene_element--fadein {
+    animation-name: fadeIn; }
+  .m-scene .scene_element--fadeinup {
+    animation-name: fadeInUp; }
+  .m-scene .scene_element--fadeinright {
+    animation-name: fadeInRight; }
+  .m-scene.is-exiting .scene_element {
+    animation-direction: alternate-reverse; }
+
 * {
   box-sizing: border-box; }
 
@@ -45,7 +89,7 @@ html, body {
   vertical-align: top; }
 
 .section {
-  height: auto;
+  height: 100vh;
   width: 100%; }
 
 .home {
@@ -54,6 +98,20 @@ html, body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+  .home .align {
+    height: 100%; }
+    .home .align .logo {
+      display: flex;
+      align-items: center;
+      height: 100%; }
+      .home .align .logo h1 {
+        font-family: "Cantata One", sans-serif;
+        font-size: 4em;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 60px; }
+      .home .align .logo span {
+        display: block; }
 
 .align {
   height: 100%; }
@@ -80,7 +138,8 @@ html, body {
     max-width: 36%;
     display: block;
     float: left;
-    margin: 15% 11%; }
+    margin: 13% 11%;
+    padding-top: 2%; }
     .about .content h1 {
       font-family: "Cantata One", sans-serif;
       font-size: 3em;
@@ -115,7 +174,7 @@ html, body {
         .about .content .social ul i:hover {
           color: #FC2D41; }
     .about .content .buttons {
-      margin-top: 90px; }
+      margin-top: 60px; }
 
 .projects .content {
   width: 80%;
@@ -144,10 +203,11 @@ html, body {
   .projects .content .flex-grid {
     margin: 0 0 20px 0; }
   .projects .content .col {
-    padding: 20px; }
+    padding-right: 60px; }
     .projects .content .col img {
       width: 100%;
-      display: block; }
+      display: block;
+      padding-bottom: 60px; }
 
 .photography .content {
   width: 80%;
@@ -176,7 +236,7 @@ html, body {
   .photography .content .flex-grid {
     margin: 0 0 20px 0; }
   .photography .content .col {
-    padding: 20px; }
+    padding-right: 60px; }
     .photography .content .col img {
       width: 100%;
       display: block; }
@@ -236,6 +296,8 @@ h4 {
 .nav {
   vertical-align: top;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 999;
   display: block;
   width: 100%;
@@ -244,11 +306,16 @@ h4 {
   .nav .logo {
     display: inline-block;
     padding: 20px 80px 0 20px; }
+    .nav .logo a {
+      text-decoration: none;
+      color: #000; }
     .nav .logo h2 {
       font-family: "Cantata One", sans-serif;
       font-size: 1em;
       text-transform: uppercase;
       margin: 0; }
+  .nav .logo-mobile {
+    display: none; }
   .nav ul {
     list-style: none;
     display: inline-block;
@@ -258,7 +325,7 @@ h4 {
       padding: 0 50px; }
       .nav ul li a {
         font-family: "Noto Sans", sans-serif;
-        font-size: 0.7em;
+        font-size: 0.6em;
         letter-spacing: 3px;
         text-transform: uppercase;
         color: #272727;
@@ -273,6 +340,63 @@ h4 {
       text-decoration: none; }
     .nav .lang p a:active {
       text-decoration: underline; }
+  .nav i {
+    font-size: 5px;
+    color: #FC2D41;
+    vertical-align: middle;
+    padding-right: 13px; }
+  .nav .hamburgler-icon {
+    display: none; }
+
+.nav-projects {
+  vertical-align: top;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: block;
+  width: 100%;
+  padding: 20px; }
+  .nav-projects .logo {
+    display: inline-block;
+    padding: 20px 80px 0 20px; }
+    .nav-projects .logo h2 {
+      font-family: "Cantata One", sans-serif;
+      font-size: 1em;
+      text-transform: uppercase;
+      margin: 0;
+      color: #fff; }
+  .nav-projects ul {
+    list-style: none;
+    display: inline-block;
+    padding-left: 80px; }
+    .nav-projects ul li {
+      float: left;
+      padding: 0 50px; }
+      .nav-projects ul li a {
+        font-family: "Noto Sans", sans-serif;
+        font-size: 0.7em;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #fff;
+        text-decoration: none; }
+  .nav-projects .lang {
+    float: right;
+    padding: 0 20px; }
+    .nav-projects .lang p {
+      color: #fff; }
+      .nav-projects .lang p a {
+        font-family: "Cantata One", sans-serif;
+        font-size: 0.8em;
+        color: #fff;
+        text-decoration: none; }
+      .nav-projects .lang p a:active {
+        text-decoration: underline; }
+  .nav-projects i {
+    font-size: 5px;
+    color: #FC2D41;
+    vertical-align: middle;
+    padding-right: 13px; }
 
 .btn {
   text-decoration: none;
@@ -284,7 +408,7 @@ h4 {
 
 .btn-border {
   text-decoration: none;
-  padding: 15px 23px;
+  padding: 15px 20px;
   border-width: 2px;
   border-color: #FC2D41;
   font-family: "Noto Sans", sans-serif;
@@ -305,3 +429,134 @@ h4 {
     color: #fff; }
   .btn-red-border:active {
     background-color: #fc2d41; }
+
+.tnm {
+  background-color: #2B2B2B; }
+  .tnm nav {
+    background-color: #2B2B2B; }
+
+.hamburgler-icon-wrapper {
+  position: fixed;
+  top: 1.2em;
+  right: 1.5em;
+  height: 26px;
+  width: 26px;
+  cursor: pointer; }
+
+.hamburgler-icon, .hamburgler-icon:before, .hamburgler-icon:after {
+  content: '';
+  position: absolute;
+  border-radius: 1em;
+  height: 3px;
+  width: 26px;
+  background: #FC2D41;
+  transition: all 0.2s ease; }
+
+.hamburgler-icon {
+  top: 0.75em; }
+
+.hamburgler-icon:before {
+  top: -0.55em; }
+
+.hamburgler-icon:after {
+  top: 0.55em; }
+
+.hamburgler-active .hamburgler-icon {
+  background: transparent;
+  transform: rotate(-135deg); }
+
+.hamburgler-active .hamburgler-icon:before, .hamburgler-active .hamburgler-icon:after {
+  top: 0; }
+
+.hamburgler-active .hamburgler-icon:before {
+  transform: rotate(90deg); }
+
+.hamburgler-active .hamburgler-icon, .hamburgler-active .hamburgler-icon:before, .hamburgler-active .hamburgler-icon:after {
+  background: white; }
+
+.hamburgler-menu {
+  transition: all 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  text-align: center; }
+
+.hamburgler-active .hamburgler-menu {
+  opacity: 1;
+  pointer-events: initial; }
+
+.hamburgler-menu-list {
+  display: block;
+  transition: all 0.4s ease;
+  padding: 0;
+  list-style-type: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2); }
+
+.hamburgler-active .hamburgler-menu-list {
+  transform: translate(-50%, -50%) scale(1); }
+
+@media (max-width: 320px) {
+  .about {
+    background: none; }
+    .about .content {
+      padding-top: 20%; }
+      .about .content h1 {
+        font-size: 2em; }
+      .about .content h2 {
+        font-size: 0.6em; }
+      .about .content p {
+        font-size: 0.6em; } }
+
+@media (max-width: 640px) {
+  .home .align .logo {
+    height: 100vh; }
+    .home .align .logo h1 {
+      font-family: "Cantata One", sans-serif;
+      font-size: 2.5em;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 10px; }
+    .home .align .logo span {
+      display: block; }
+  .nav {
+    padding: 20px; }
+    .nav .logo {
+      display: none; }
+    .nav .logo-mobile {
+      display: inline-block;
+      padding: 0px; }
+      .nav .logo-mobile h2 {
+        font-family: "Cantata One", sans-serif;
+        font-size: 1em;
+        text-transform: uppercase;
+        margin: 0; }
+    .nav ul {
+      display: none; }
+    .nav .lang {
+      display: none; }
+    .nav i {
+      font-size: 5px;
+      color: #FC2D41;
+      vertical-align: middle;
+      padding-right: 13px; }
+    .nav .hamburgler-icon {
+      display: inline-block; }
+  .about .content {
+    margin: 12% 6%;
+    max-width: 100%;
+    float: none; }
+    .about .content .buttons {
+      margin-top: 150px; }
+    .about .content .btn {
+      padding: 15px 20px; }
+  .section {
+    height: auto; } }
