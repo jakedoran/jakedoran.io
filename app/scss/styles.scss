@@ -365,6 +365,7 @@ h4 {
 		li {
 			float: left;
 			padding: 0 50px;
+			position: relative;
 			a {
 				font-family: $font-nav;
 				font-size: 0.6em;
@@ -393,8 +394,11 @@ h4 {
 	i {
 		font-size: 5px;
 		color: $flower-red;
-		vertical-align: middle;
-		padding-right: 13px;
+		// vertical-align: middle;
+		// padding-right: 13px;
+		position: absolute;
+		left: 26px; 
+		top: 8px;
 	}
 	.hamburgler-icon {
 		display: none;
@@ -620,7 +624,7 @@ h4 {
 				margin: 0;
 			}
 		}
-		ul {
+		> ul {
 			display: none;
 		}
 		.lang {
@@ -655,6 +659,28 @@ h4 {
 	}
 	.section {
 		height: auto;
+	}
+
+	.projects{ 
+		.col{
+			padding-right: 0px !important;
+		}
+
+		.content{
+			width: 100% !important;
+			margin-top: 60px !important;
+		}
+	}
+
+	.photography{ 
+		.col{
+			padding-right: 0px !important;
+		}
+
+		.content{
+			width: 100% !important;
+			margin-top: 60px !important;
+		}
 	}
 
 }

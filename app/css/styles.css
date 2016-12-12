@@ -322,7 +322,8 @@ h4 {
     padding-left: 80px; }
     .nav ul li {
       float: left;
-      padding: 0 50px; }
+      padding: 0 50px;
+      position: relative; }
       .nav ul li a {
         font-family: "Noto Sans", sans-serif;
         font-size: 0.6em;
@@ -343,8 +344,9 @@ h4 {
   .nav i {
     font-size: 5px;
     color: #FC2D41;
-    vertical-align: middle;
-    padding-right: 13px; }
+    position: absolute;
+    left: 26px;
+    top: 8px; }
   .nav .hamburgler-icon {
     display: none; }
 
@@ -539,7 +541,7 @@ h4 {
         font-size: 1em;
         text-transform: uppercase;
         margin: 0; }
-    .nav ul {
+    .nav > ul {
       display: none; }
     .nav .lang {
       display: none; }
@@ -559,4 +561,14 @@ h4 {
     .about .content .btn {
       padding: 15px 20px; }
   .section {
-    height: auto; } }
+    height: auto; }
+  .projects .col {
+    padding-right: 0px !important; }
+  .projects .content {
+    width: 100% !important;
+    margin-top: 60px !important; }
+  .photography .col {
+    padding-right: 0px !important; }
+  .photography .content {
+    width: 100% !important;
+    margin-top: 60px !important; } }
