@@ -347,8 +347,9 @@ h4 {
     position: absolute;
     left: 26px;
     top: 8px; }
-  .nav .hamburgler-icon {
-    display: none; }
+
+.hamburgler-icon {
+  display: none; }
 
 .nav-projects {
   vertical-align: top;
@@ -498,25 +499,50 @@ h4 {
   transition: all 0.4s ease;
   padding: 0;
   list-style-type: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%) scale(1.2); }
 
 .hamburgler-active .hamburgler-menu-list {
   transform: translate(-50%, -50%) scale(1); }
 
+.hamburgler-menu-list li p {
+  color: #fff;
+  font-size: 3em; }
+
 @media (max-width: 320px) {
   .about {
     background: none; }
     .about .content {
-      padding-top: 20%; }
+      display: flex;
+      flex-direction: column;
+      padding-top: 20%;
+      max-width: 90% !important; }
       .about .content h1 {
         font-size: 2em; }
       .about .content h2 {
         font-size: 0.6em; }
       .about .content p {
-        font-size: 0.6em; } }
+        font-size: 0.6em; }
+      .about .content .social ul li {
+        float: left; }
+  .buttons .home-button {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px; }
+    .buttons .home-button .button-red {
+      background-color: #FC2D41; }
+      .buttons .home-button .button-red p {
+        padding: 10px 0;
+        text-align: center; }
+        .buttons .home-button .button-red p a {
+          margin: auto; }
+    .buttons .home-button .button-red-border {
+      border: solid #FC2D41 2px; }
+      .buttons .home-button .button-red-border p {
+        text-align: center; } }
+
+@media (max-width: 500px) {
+  .about {
+    background: none; } }
 
 @media (max-width: 640px) {
   .home .align .logo {
@@ -550,8 +576,8 @@ h4 {
       color: #FC2D41;
       vertical-align: middle;
       padding-right: 13px; }
-    .nav .hamburgler-icon {
-      display: inline-block; }
+  .hamburgler-icon {
+    display: inline-block; }
   .about .content {
     margin: 12% 6%;
     max-width: 100%;
@@ -572,3 +598,16 @@ h4 {
   .photography .content {
     width: 100% !important;
     margin-top: 60px !important; } }
+
+@media (max-width: 1100px) {
+  .nav .logo {
+    padding: 0; }
+  .nav ul li {
+    padding: 0 20px; }
+  .nav .lang {
+    display: none; }
+  .nav i {
+    display: none; }
+  .about .content {
+    max-width: 50%;
+    margin: 17% 11%; } }

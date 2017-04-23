@@ -4,7 +4,6 @@
 <meta name=viewport content="width=device-width, initial-scale=1">
 <title>Jake Doran | Portfolio</title>
 <link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 <link rel="stylesheet" href="css/styles.css">
 <script src="https://use.fontawesome.com/a72e371c01.js"></script>
 </head>
@@ -30,19 +29,22 @@
 			<p><a href="index.html">EN </a>/<a href="index-jp.html"> JP</a></p>
 		</div>
 		<div class="hamburgler-menu">
-		  <ul class="hamburgler-menu-list">
-		    <li><a href="index.html">About</a></li>
-		    <li><a href="projects.html">Projects</a></li>
-		    <li><a href="photography.html">Photography</a></li>
-		    <li><a href="contact.html">Contact</a></li>
-		    <li>up</li>
-		  </ul>
+		  <div class="hamburgler-menu-list">
+		  	<ul>
+		  		<li><a href="index.html"><p>About</p></a></li>
+			    <li><a href="projects.html"><p>Projects</p></a></li>
+			    <li><a href="photography.html"><p>Photography</p></a></li>
+			    <li><a href="contact.html"><p>Contact</p></a></li>
+		  	</ul>
+		    
+		  </div>
 		</div>
 
 		<div id="hamburgler" class="hamburgler-icon-wrapper">
 		  <span class="hamburgler-icon"></span>
 		</div>
     </div>
+    
     <div class="m-scene" id="main">
 	    <div class="m-header scene_element scene_element--fadeinright">
 		    <div class="section about">
@@ -61,8 +63,18 @@
 						</ul>
 					</div>
 					<div class="buttons">
-						<a href="#work" class="btn btn-red">VIEW RÉSUMÉ</a>
-						<a href="#a-contact" class="btn-border btn-red-border">GET IN TOUCH</a>
+						<div class="home-button">
+							<div class="button-red">
+								<p><a href="">VIEW RÉSUMÉ</a></p>
+							</div>
+						</div>
+						<div class="home-button">
+							<div class="button-red-border">
+								<p><a href="">GET IN TOUCH</a></p>
+							</div>
+						</div>
+						<!-- <a href="#work" class="btn btn-red">VIEW RÉSUMÉ</a>
+						<a href="#a-contact" class="btn-border btn-red-border">GET IN TOUCH</a> -->
 					</div>
 					
 		    	</div>

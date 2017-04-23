@@ -400,11 +400,11 @@ h4 {
 		left: 26px; 
 		top: 8px;
 	}
-	.hamburgler-icon {
+	
+}
+.hamburgler-icon {
 		display: none;
 	}
-}
-
 .nav-projects {
 	vertical-align: top;
 	position: fixed;
@@ -559,14 +559,30 @@ h4 {
   transition: all 0.4s ease; 
   padding: 0;
   list-style-type: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%) scale(1.2) }
 .hamburgler-active .hamburgler-menu-list {
   transform: translate(-50%, -50%) scale(1) }
 
-
+.hamburgler-menu-list {
+	
+	// .nav {
+	// 	ul {
+	// 		margin-top: 50px;
+	// 		list-style: none;
+	// 		display: block;
+	// 		padding-left: 80px;
+	// 		margin-left: 50px;
+	// 	}
+	// }
+	
+	li {
+		p {
+			color: #fff;
+			font-size: 3em;
+		}
+	}
+	
+}
 
 
 //
@@ -577,7 +593,10 @@ h4 {
 	.about {
 		background: none;
 		.content {
+			display: flex;
+			flex-direction: column;
 			padding-top: 20%;
+			max-width: 90% !important;
 			h1 {
 				font-size: 2em;
 			}
@@ -587,6 +606,43 @@ h4 {
 			p {
 				font-size: 0.6em;
 			}
+			.social ul li {
+				float: left;
+			}
+		}
+	}
+	.buttons {
+		
+		.home-button {
+			width: 100%;
+			height: 30px;
+			margin-bottom: 20px;
+			.button-red {
+				background-color: $flower-red;
+				p {
+					padding: 10px 0;
+					text-align: center;
+					a {
+						margin: auto;
+					}
+				}
+
+			}
+			.button-red-border {
+				border: solid $flower-red 2px;
+				p {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.about {
+		background: none;
+		.content {
+			
 		}
 	}
 }
@@ -636,10 +692,11 @@ h4 {
 			vertical-align: middle;
 			padding-right: 13px;
 		}
-		.hamburgler-icon {
-			display: inline-block;
-		}
 		
+		
+	}
+	.hamburgler-icon {
+		display: inline-block;
 	}
 	.about {
 		.content {
@@ -683,4 +740,33 @@ h4 {
 		}
 	}
 
+}
+
+@media (max-width: 1100px) {
+	.nav {
+		.logo {
+			padding: 0;
+		}
+		ul li {
+			padding: 0 20px;
+		}
+		.lang {
+			display: none;
+		}
+		i {
+			// font-size: 5px;
+			// color: $flower-red;
+			// vertical-align: middle;
+			// padding-right: 13px;
+			// fcking work pls
+			display: none;
+		}
+		
+	}
+	.about {
+		.content {
+			max-width: 50%;
+			margin: 17% 11%;
+		}
+	}
 }
