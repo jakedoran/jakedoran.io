@@ -51,27 +51,3 @@
   transform: translate(-50%, -50%) scale(1) }
 
 
-li {
-  list-style: none;
-  a {
-    color: #ffffff;
-    text-decoration: none;
-    h1 {
-      color: #ffffff;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: $heading-size;
-      padding: 10px;
-      margin: 0;
-      letter-spacing: -2px;
-
-    }
-    h1:hover {
-      color: $flower-red;
-    }
-  }
-}
-
-
-
-

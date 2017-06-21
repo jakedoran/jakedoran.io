@@ -1,0 +1,416 @@
+//
+// Import
+//---------------------------------------------------
+
+//font
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,300,300italic,400italic);
+
+//mixins
+@import 'mixins';
+
+//variables
+@import 'variables';
+
+//items
+@import '_icons.scss';
+@import '_burger.scss';
+
+//pages
+@import 'pages/_home.scss';
+@import 'pages/_intro.scss';
+@import 'pages/_skills.scss';
+@import 'pages/_projects.scss';
+@import 'pages/_contact.scss';
+@import 'pages/_about.scss';
+
+
+
+
+
+
+
+
+//
+// Main styles
+//---------------------------------------------------
+
+*{
+	box-sizing: border-box; // fuckin love border box
+}
+
+html {
+	margin: 0;
+}
+
+
+
+section{
+	height: 100vh;
+	width: 100%;
+	// border: 20px solid white; // putting them on the sections not the html
+
+}
+
+.home {
+	background: url(../img/bg-home.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.intro {
+	background: url(../img/bg-flower-test.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+.content {
+		max-width: 40%;
+		display: block;
+		float: left;
+		margin: 8% 8%;
+	  	h1 {
+			color: $heading-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: $heading-size;
+			padding: 0;
+			margin: 0;
+			letter-spacing: -2px;
+		}
+		h3 {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			font-style: italic;
+			font-size: 1em;
+			padding: 0;
+			margin: 0;
+			color: $heading-color;
+		}
+		h4 {
+			color: $primary-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1em;
+			padding: 0px;
+			vertical-align: center;
+			letter-spacing: -1px;
+		}
+		h5 {
+			color: $heading-color;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1.4em;
+			padding: 0px;
+			margin: 0;
+			vertical-align: center;
+			letter-spacing: -1px;
+		}
+		p {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+			color: $seccondary-color;
+			padding: 10px 0;
+			font-size: $content-size;
+			a {
+				color: $seccondary-color;
+			}
+			
+		}
+
+
+		.social {
+			display: inline-block;
+			ul {
+				list-style: none;
+				padding: 0;
+				li {
+					padding: 0 5px;
+					float: right;
+				}
+				i {
+					font-size: 2em;
+					color: $seccondary-color;
+					float: left;
+					padding: 0px;
+				}
+				i:hover {
+					color: $flower-red;
+				}
+			}
+			
+		}
+		
+
+		.rotation {
+			margin-top: 50px;
+			p {
+				padding: 2px 0;
+				margin: 0;
+			}
+			h4 {
+				margin-top: 15px;
+			}
+		}
+		.buttons {
+			// display: block;
+			margin: 50px 0;
+		}
+		
+	}
+
+
+
+
+
+footer {
+	height: 6vh;
+	max-width: 100%;
+	background-color: #F5F6F8;
+	h1 {
+		margin: auto;
+		padding-top: 5px;
+	}
+}
+
+//
+// Borders
+//---------------------------------------------------
+
+/* Create a series of empty pseudo-elements... */
+html:before,html:after,body:before,body:after{
+    content:"";
+    background:#fff;
+    position:fixed;
+    display:block;
+    z-index:5;
+}
+
+/* ...and position them! */
+html:before{
+    height:20px;
+    left:0;
+    right:0;
+    top:0;
+}
+html:after{
+    width:20px;
+    top:0;
+    right:0;
+    bottom:0;
+}
+body:before{
+    height:20px;
+    right:0;
+    bottom:0;
+    left:0;
+}
+body:after{
+    width:20px;
+    top:0;
+    bottom:0;
+    left:0;
+}
+
+
+//
+// Other styles
+//---------------------------------------------------
+
+
+.btn {
+ text-decoration:none;
+ padding: 15px 32px;
+ font-family: 'Montserrat', sans-serif;
+ font-size: $btn-size;
+ color: #fff;
+ border: solid #fc2d41 2px;
+}
+
+.btn-border {
+ text-decoration:none;
+ padding: 15px 23px;
+ border-width: 2px;
+ border-color: $flower-red;
+ font-family: 'Montserrat', sans-serif;
+ font-size: $btn-size;
+ color: $primary-color;
+
+
+}
+
+.btn-red {
+   @include button-bg($flower-red);
+   margin-right: 10px;
+}
+
+.btn-red-border {
+   @include button-bg-border(#fff);
+}
+
+//
+// Responsive Code
+//---------------------------------------------------
+
+@media (max-width: 1400px) {
+	section{
+		height: auto; 
+		overflow: hidden;
+	}
+
+	section.home{
+		height: 100vh; //keep the first header vh
+	}
+}
+
+@media (max-width: 700px){
+	.title{
+		max-width: 100% !important;
+		margin: 8% !important;
+		float: left !important;
+	}
+}
+
+@media (max-width: 800px) {
+	.title {
+		max-width: 90% !important;
+		p {
+			font-size: 0.8em;
+		}
+	}
+}
+
+@media (max-width: 650px) {
+
+	.intro { // intro start 
+
+	  .title {
+	  	
+	  	p {
+		//	width: 80%;
+			font-size: 13px;
+		}
+		h1 {
+			font-size: 2em;
+		}
+		h3 {
+			font-size: 0.9em;
+		}
+		h4 {
+			font-size: 0.9em;
+		}
+		h5 {
+			font-size: 1.2em;
+		}	
+	  }
+  	} // intro end
+
+
+  	.skills { // skills start 
+
+	  .title {
+	  	float: left;
+	  	// text-align: center;
+	  	p {
+		//	width: 80%;
+			font-size: 13px;
+		}
+		h1 {
+			font-size: 2em;
+		}
+		h3 {
+			font-size: 0.9em;
+		}
+		h4 {
+			font-size: 0.9em;
+		}
+		h5 {
+			font-size: 1.2em;
+		}
+		.skillset {
+			h4 {
+				font-size: 0.9em;
+				padding-top: 20px;
+			}
+			p {
+				font-size: 13px;
+				width: 95%;
+			}
+		}	
+	  }
+  	} // skills end
+
+
+
+  	.projects { // projects start 
+
+	  .title {
+	  	// text-align: center;
+	  	p {
+			//width: 80%;
+			font-size: 13px;
+		}
+		h1 {
+			font-size: 2em;
+		}
+		.project-copy {
+				margin-bottom: 3%;
+
+				h1 {
+				font-size: 2em;
+				}
+				h2  {
+					font-size: $subheading-size;
+				}
+				h3 {
+					font-size: $subheading-size;
+				}
+				p {
+					width: 85%;
+					font-size: 13px;
+				}
+				a {
+					font-size: 1em;	
+				}
+
+				.project-date {
+					p {
+						width: 85%;
+						font-size: 0.5em;	
+					}
+					
+				}
+			}
+	  }
+  	} // projects end
+
+
+  	.contact { // intro start 
+
+	  .title {
+	  	// text-align: center;
+	  	p {
+			//width: 80%;
+			font-size: 13px;
+		}
+		h1 {
+			font-size: 2em;
+		}
+		h3 {
+			font-size: 0.9em;
+		}
+		h4 {
+			font-size: 0.9em;
+		}
+		h5 {
+			font-size: 1.2em;
+		}	
+	  }
+  	} // intro end
+
+} // 650px media query end
